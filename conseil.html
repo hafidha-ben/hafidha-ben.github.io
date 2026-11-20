@@ -1,1 +1,1088 @@
-[https://calendar.app.google/YNu6LXN3UTheiBRW9](https://calendar.app.google/YNu6LXN3UTheiBRW9)
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hafidha Benyahia — Conseil Stratégique, Opérations &amp; Transformation B2B</title>
+  <meta name="description" content="Conseil en stratégie, architecture opérationnelle, optimisation des flux et sparring de dirigeants.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #FAF9F6;
+      --surface: #FFFFFF;
+      --surface-alt: #F3F1EC;
+      --text: #18181B;
+      --text-muted: #52525B;
+      --accent: #1E3A2F;
+      --accent-soft: rgba(30, 58, 47, 0.08);
+      --accent-warm: #9A5B3E;
+      --border: #E4E2DD;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.65;
+      font-size: 15.5px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.lang-fr .i18n-en { display: none !important; }
+    body.lang-en .i18n-fr { display: none !important; }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 249, 246, 0.97);
+      border-bottom: 1px solid var(--border);
+      padding: 0.8rem 1.15rem;
+    }
+
+    .nav-inner {
+      max-width: 1020px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-size: clamp(1.1rem, 3.8vw, 1.4rem);
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-right {
+      display: flex;
+      gap: 0.55rem;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .nav-menu-panel {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.1rem;
+      align-items: center;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-switch {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      padding: 0.36rem 0.68rem;
+      border-radius: 6px;
+      color: var(--text) !important;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .mobile-health-btn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-size: 0.76rem;
+      font-weight: 600;
+      padding: 0.36rem 0.62rem;
+      border-radius: 7px;
+      text-decoration: none;
+      white-space: nowrap;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .nav-cta {
+      background: var(--accent);
+      color: #FFFFFF !important;
+      padding: 0.45rem 0.95rem;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .menu-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.36rem 0.62rem;
+      border-radius: 7px;
+      cursor: pointer;
+      white-space: nowrap;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+      position: relative;
+      z-index: 102;
+    }
+
+    .lang-tabs {
+      display: inline-flex;
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      padding: 0.18rem;
+      gap: 0.15rem;
+    }
+
+    .lang-tab {
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-sans);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 0.3rem 0.55rem;
+      border-radius: 5px;
+      cursor: pointer;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .lang-tab.active {
+      background: var(--accent);
+      color: #FFFFFF;
+    }
+
+    @media (max-width: 860px) {
+      .mobile-health-btn { display: inline-flex; }
+      .menu-toggle { display: inline-flex; }
+      .nav-menu-panel .nav-switch { display: none; }
+
+      .nav-menu-panel {
+        display: none;
+        position: fixed;
+        top: var(--nav-height, 60px);
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 1.25rem 1.25rem;
+        box-shadow: 0 12px 28px rgba(24, 24, 27, 0.12);
+        z-index: 101;
+      }
+
+      .nav-menu-panel.open { display: block; }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.25rem;
+      }
+
+      .nav-links a {
+        padding: 0.65rem 0.4rem;
+        border-bottom: 1px solid var(--surface-alt);
+        font-size: 0.95rem;
+      }
+
+      .nav-links a:last-child { border-bottom: none; }
+
+      .nav-cta {
+        margin-top: 0.45rem;
+        text-align: center;
+        padding: 0.7rem 1rem !important;
+      }
+    }
+
+    .container {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .hero {
+      padding: 4.5rem 0 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-warm);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 4.8vw, 3.65rem);
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+      max-width: 860px;
+    }
+
+    h1 em { font-style: italic; color: var(--accent); }
+
+    .hero-lead {
+      font-size: 1.08rem;
+      color: var(--text-muted);
+      margin-bottom: 1.85rem;
+      max-width: 780px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-bottom: 2.75rem;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #FFFFFF;
+      padding: 0.85rem 1.55rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      transition: opacity 0.2s;
+    }
+
+    .btn-primary:hover { opacity: 0.92; }
+
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 0.85rem 1.55rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      display: inline-block;
+      transition: border-color 0.2s;
+    }
+
+    .btn-secondary:hover { border-color: var(--text); }
+
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1.25rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .trust-item strong {
+      display: block;
+      font-size: 0.92rem;
+      color: var(--accent);
+      margin-bottom: 0.2rem;
+    }
+
+    .trust-item span {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      display: block;
+    }
+
+    section {
+      padding: 4.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-header { margin-bottom: 2.5rem; }
+
+    h2 {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 740px;
+    }
+
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .offer-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .offer-card.featured {
+      border: 1.5px solid var(--accent);
+      box-shadow: 0 10px 28px rgba(30, 58, 47, 0.06);
+    }
+
+    .offer-tag {
+      display: inline-block;
+      font-size: 0.73rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-warm);
+      margin-bottom: 0.55rem;
+    }
+
+    .offer-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.55rem;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+
+    .offer-problem {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .offer-list {
+      list-style: none;
+      font-size: 0.88rem;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+
+    .offer-list li {
+      padding-left: 1.2rem;
+      position: relative;
+      margin-bottom: 0.5rem;
+    }
+
+    .offer-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .offer-footer {
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .offer-format {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--surface-alt);
+      padding: 0.3rem 0.65rem;
+      border-radius: 5px;
+    }
+
+    .offer-link {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .offer-link:hover { text-decoration: underline; }
+
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.35rem;
+    }
+
+    .case-card {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.75rem;
+    }
+
+    .case-sector {
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-warm);
+      display: block;
+      margin-bottom: 0.45rem;
+    }
+
+    .case-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .case-card p {
+      font-size: 0.89rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .case-result {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      display: inline-block;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .step-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.75rem;
+    }
+
+    .step-num {
+      font-family: var(--font-serif);
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--accent-warm);
+      line-height: 1;
+      margin-bottom: 0.6rem;
+    }
+
+    .step-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.45rem;
+    }
+
+    .step-card p {
+      font-size: 0.89rem;
+      color: var(--text-muted);
+    }
+
+    .booking-box {
+      background: var(--surface);
+      border: 1.5px solid var(--accent);
+      border-radius: 14px;
+      padding: 2.5rem;
+      display: grid;
+      grid-template-columns: 1.45fr 0.85fr;
+      gap: 2.25rem;
+      align-items: center;
+    }
+
+    @media (max-width: 780px) {
+      .booking-box { grid-template-columns: 1fr; }
+    }
+
+    .booking-box h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .booking-box p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-size: 0.96rem;
+    }
+
+    .booking-meta {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      font-size: 0.88rem;
+    }
+
+    .booking-meta div {
+      margin-bottom: 0.75rem;
+    }
+
+    .booking-meta div:last-child { margin-bottom: 0; }
+
+    .booking-meta a {
+      color: var(--text);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .booking-meta a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    footer {
+      padding: 2.5rem 0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body class="lang-fr">
+
+  <nav id="main-nav">
+    <div class="nav-inner">
+      <a href="conseil.html" class="nav-logo">Hafidha Benyahia</a>
+
+      <div class="nav-right">
+        <a href="index.html" class="mobile-health-btn i18n-fr">Santé ↗</a>
+        <a href="index.html" class="mobile-health-btn i18n-en">Health ↗</a>
+
+        <div id="nav-menu-panel" class="nav-menu-panel">
+          <div class="nav-links i18n-fr">
+            <a href="#offres">Offres</a>
+            <a href="#cas-clients">Références</a>
+            <a href="#methode">Méthode</a>
+            <a href="index.html" class="nav-switch">Profil Exécutif Santé ↗</a>
+            <a href="#rdv" class="nav-cta">Prendre RDV</a>
+          </div>
+
+          <div class="nav-links i18n-en">
+            <a href="#offres">Services</a>
+            <a href="#cas-clients">Track Record</a>
+            <a href="#methode">Approach</a>
+            <a href="index.html" class="nav-switch">Health Executive Profile ↗</a>
+            <a href="#rdv" class="nav-cta">Book a Call</a>
+          </div>
+        </div>
+
+        <button type="button" id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="nav-menu-panel">
+          Menu ☰
+        </button>
+
+        <div class="lang-tabs" aria-label="Language selector">
+          <button type="button" id="tab-fr" class="lang-tab active" aria-pressed="true" onclick="setLanguage('fr')">FR</button>
+          <button type="button" id="tab-en" class="lang-tab" aria-pressed="false" onclick="setLanguage('en')">EN</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <header class="hero">
+      <span class="eyebrow i18n-fr">Conseil Stratégique • Architecture Opérationnelle • Sparring Dirigeants</span>
+      <span class="eyebrow i18n-en">Strategic Advisory • Operating Models • Executive Sparring</span>
+
+      <h1 class="i18n-fr">Structurer vos opérations et sécuriser vos décisions <em>sans alourdir</em> votre organisation.</h1>
+      <h1 class="i18n-en">Streamline operations and de-risk critical decisions <em>without adding</em> organizational overhead.</h1>
+
+      <p class="hero-lead i18n-fr">
+        Ex-Manager Strategy &amp; Transformation (Capgemini Invent) et ex-CEO (Los Angeles), j’accompagne les fondateurs, dirigeants de PME/ETI et équipes projets sur le cadrage stratégique, l’optimisation des flux opérationnels et le challenge critique de vos dossiers clés.
+      </p>
+      <p class="hero-lead i18n-en">
+        Former Strategy &amp; Transformation Manager (Capgemini Invent) and startup CEO (Los Angeles), I partner with founders, SME leaders, and project teams on strategic framing, workflow optimization, and critical review of high-stakes deliverables.
+      </p>
+
+      <div class="hero-actions i18n-fr">
+        <a href="https://calendar.app.google/YNu6LXN3UTheiBRW9" target="_blank" rel="noopener" class="btn-primary">Réserver un échange (20 min — Google Meet)</a>
+        <a href="#offres" class="btn-secondary">Découvrir les formats d’intervention</a>
+      </div>
+      <div class="hero-actions i18n-en">
+        <a href="https://calendar.app.google/YNu6LXN3UTheiBRW9" target="_blank" rel="noopener" class="btn-primary">Book a 20-min Discovery Call (Google Meet)</a>
+        <a href="#offres" class="btn-secondary">Explore Service Formats</a>
+      </div>
+
+      <div class="trust-strip i18n-fr">
+        <div class="trust-item">
+          <strong>Ex-Capgemini Invent</strong>
+          <span>Manager Strategy &amp; Transformation (Zurich &amp; Europe)</span>
+        </div>
+        <div class="trust-item">
+          <strong>Ex-CEO &amp; Fondatrice</strong>
+          <span>Pilotage P&amp;L, 2 pivots B2B/B2B2C &amp; financements non dilutifs (USA)</span>
+        </div>
+        <div class="trust-item">
+          <strong>Approche Pragmatique</strong>
+          <span>Livrables actionnables, zéro jargon inutile, ancrage terrain</span>
+        </div>
+      </div>
+
+      <div class="trust-strip i18n-en">
+        <div class="trust-item">
+          <strong>Ex-Capgemini Invent</strong>
+          <span>Strategy &amp; Transformation Manager (Zurich &amp; Europe)</span>
+        </div>
+        <div class="trust-item">
+          <strong>Former CEO &amp; Founder</strong>
+          <span>Full P&amp;L ownership, 2 B2B/B2B2C pivots &amp; non-dilutive grants (US)</span>
+        </div>
+        <div class="trust-item">
+          <strong>Pragmatic Execution</strong>
+          <span>Actionable deliverables, zero fluff, grounded in field reality</span>
+        </div>
+      </div>
+    </header>
+
+    <section id="offres">
+      <div class="section-header i18n-fr">
+        <h2>Catalogue d’Offres &amp; Formats d’Intervention</h2>
+        <p class="section-desc">
+          Des formats calibrés selon votre besoin : du second regard rapide sur un dossier stratégique jusqu’au sprint de refonte opérationnelle.
+        </p>
+      </div>
+      <div class="section-header i18n-en">
+        <h2>Service Catalog &amp; Engagement Formats</h2>
+        <p class="section-desc">
+          Modular formats tailored to your stage: from a rapid second-opinion review to a structured operational redesign sprint.
+        </p>
+      </div>
+
+      <div class="offers-grid i18n-fr">
+        <div class="offer-card">
+          <div>
+            <span class="offer-tag">Format 01 • Ponctuel (48–72h)</span>
+            <h3>Flash Review &amp; Second Regard</h3>
+            <p class="offer-problem">
+              Avant d’envoyer une proposition commerciale majeure, un pitch ou un dossier interne structurant, validez sa clarté, sa logique et ses angles morts.
+            </p>
+            <ul class="offer-list">
+              <li>Relecture critique structurée (proposition de valeur, cohérence, failles)</li>
+              <li>Annotations directes et suggestions de reformulation sur le document</li>
+              <li>Session de débriefing et challenge (45 à 60 min en visio)</li>
+            </ul>
+          </div>
+          <div class="offer-footer">
+            <span class="offer-format">À l’acte ou carnet d’heures</span>
+            <a href="#rdv" class="offer-link">Cadrer un dossier →</a>
+          </div>
+        </div>
+
+        <div class="offer-card featured">
+          <div>
+            <span class="offer-tag">Format 02 • Sprint 2 à 4 semaines</span>
+            <h3>Diagnostic Opérationnel &amp; Flux</h3>
+            <p class="offer-problem">
+              Votre activité est ralentie par des ressaisies manuelles (tableurs, messageries, emails), des ruptures de charge ou un manque de lisibilité entre équipes.
+            </p>
+            <ul class="offer-list">
+              <li>Cartographie des flux réels (<em>As-Is</em>) et mesure des frictions</li>
+              <li>Schéma cible simplifié (<em>To-Be</em>) et clarification des responsabilités</li>
+              <li>Plan d’action priorisé distinguant gains rapides et chantiers de fond</li>
+            </ul>
+          </div>
+          <div class="offer-footer">
+            <span class="offer-format">Forfait sprint cadré</span>
+            <a href="#rdv" class="offer-link">Planifier un diagnostic →</a>
+          </div>
+        </div>
+
+        <div class="offer-card">
+          <div>
+            <span class="offer-tag">Format 03 • Accompagnement Dirigeant</span>
+            <h3>Sparring Stratégique &amp; Gouvernance</h3>
+            <p class="offer-problem">
+              En phase de pivot, de structuration d’offre ou de charge décisionnelle élevée, confrontez vos arbitrages avec un regard exigeant et pragmatique.
+            </p>
+            <ul class="offer-list">
+              <li>Arbitrages stratégiques, priorisation et cadrage d’offres</li>
+              <li>Clarification de gouvernance, délégation et rituels de pilotage</li>
+              <li>Compte rendu décisionnel synthétique après chaque échange</li>
+            </ul>
+          </div>
+          <div class="offer-footer">
+            <span class="offer-format">Mensuel (engagement 3 mois)</span>
+            <a href="#rdv" class="offer-link">Échanger sur vos enjeux →</a>
+          </div>
+        </div>
+
+        <div class="offer-card">
+          <div>
+            <span class="offer-tag">Format 04 • Transformation &amp; PMO</span>
+            <h3>Target Operating Model &amp; Déploiement</h3>
+            <p class="offer-problem">
+              Vous déployez un nouvel outil ou réorganisez plusieurs équipes et devez sécuriser l’adoption concrète sur le terrain sans désorganiser le quotidien.
+            </p>
+            <ul class="offer-list">
+              <li>Architecture du modèle opérationnel cible (processus, gouvernance, KPIs)</li>
+              <li>Alignement entre besoins métiers, partenaires techniques et utilisateurs</li>
+              <li>Pilotage PMO, recette (UAT) et accompagnement de l’adoption</li>
+            </ul>
+          </div>
+          <div class="offer-footer">
+            <span class="offer-format">Mission sur-mesure / TJM</span>
+            <a href="#rdv" class="offer-link">Discuter du périmètre →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="offers-grid i18n-en">
+        <div class="offer-card">
+          <div>
+            <span class="offer-tag">Format 01 • On-Demand (48–72h)</span>
+            <h3>Flash Review &amp; Critical Second Opinion</h3>
+            <p class="offer-problem">
+              Before sending a high-stakes client proposal, pitch, or internal strategy memo, stress-test its clarity, logic, and blind spots.
+            </p>
+            <ul class="offer-list">
+              <li>Structured critical review (value clarity, flow, gaps)</li>
+              <li>Direct line-by-line comments and targeted wording improvements</li>
+              <li>Live challenge and debrief session (45–60 min video call)</li>
+            </ul>
+          </div>
+          <div class="offer-footer">
+            <span class="offer-format">Per deliverable or hour pack</span>
+            <a href="#rdv" class="offer-link">Scope a review →</a>
+          </div>
+        </div>
+
+        <div class="offer-card featured">
+          <div>
+            <span class="offer-tag">Format 02 • 2 to 4-Week Sprint</span>
+            <h3>Operational &amp; Workflow Diagnostic</h3>
+            <p class="offer-problem">
+              Growth is slowed down by manual workarounds (spreadsheets, chat threads, duplicate entry) and handoff friction across teams.
+            </p>
+            <ul class="offer-list">
+              <li>End-to-end <em>As-Is</em> workflow mapping and friction identification</li>
+              <li>Streamlined <em>To-Be</em> operational design and ownership clarity</li>
+              <li>Prioritized roadmap separating quick wins from structural work</li>
+            </ul>
+          </div>
+          <div class="offer-footer">
+            <span class="offer-format">Fixed-scope sprint</span>
+            <a href="#rdv" class="offer-link">Book a diagnostic →</a>
+          </div>
+        </div>
+
+        <div class="offer-card">
+          <div>
+            <span class="offer-tag">Format 03 • Executive Advisory</span>
+            <h3>Strategic Sparring &amp; Governance</h3>
+            <p class="offer-problem">
+              Navigating a pivot, offer redesign, or heavy decision load? Stress-test trade-offs with a candid, execution-focused partner.
+            </p>
+            <ul class="offer-list">
+              <li>Strategic trade-offs, prioritization, and offer framing</li>
+              <li>Governance clarity, delegation, and operating rhythm</li>
+              <li>Written decision summary after every working session</li>
+            </ul>
+          </div>
+          <div class="offer-footer">
+            <span class="offer-format">Monthly retainer (3-mo min.)</span>
+            <a href="#rdv" class="offer-link">Discuss your priorities →</a>
+          </div>
+        </div>
+
+        <div class="offer-card">
+          <div>
+            <span class="offer-tag">Format 04 • Transformation &amp; PMO</span>
+            <h3>Target Operating Model &amp; Rollout</h3>
+            <p class="offer-problem">
+              Rolling out a new tool or restructuring teams while protecting day-to-day execution and frontline adoption.
+            </p>
+            <ul class="offer-list">
+              <li>Target Operating Model (TOM): processes, governance, KPIs</li>
+              <li>Alignment across business leads, technical partners, and end users</li>
+              <li>PMO tracking, UAT readiness, and adoption support</li>
+            </ul>
+          </div>
+          <div class="offer-footer">
+            <span class="offer-format">Custom mandate / Day rate</span>
+            <a href="#rdv" class="offer-link">Scope a mandate →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cas-clients">
+      <div class="section-header i18n-fr">
+        <h2>Références &amp; Problématiques Résolues</h2>
+        <p class="section-desc">
+          Des interventions menées auprès d’acteurs de services en Suisse, de groupes internationaux et de structures en croissance.
+        </p>
+      </div>
+      <div class="section-header i18n-en">
+        <h2>Selected Track Record Across Industries</h2>
+        <p class="section-desc">
+          Mandates spanning Swiss service operators, global enterprises, and growing ventures.
+        </p>
+      </div>
+
+      <div class="cases-grid i18n-fr">
+        <div class="case-card">
+          <span class="case-sector">Services &amp; Placement • Suisse</span>
+          <h3>Audit de flux &amp; co-design d’organisation cible</h3>
+          <p>
+            Diagnostic complet des processus de recrutement, de planification et de coordination d’une structure gérant plus de 500 missions, afin de réduire les tâches manuelles dispersées et sécuriser la montée en charge.
+          </p>
+          <span class="case-result">Architecture cible &amp; feuille de route opérationnelle</span>
+        </div>
+
+        <div class="case-card">
+          <span class="case-sector">Luxe &amp; Industrie • CAC 40 / Europe</span>
+          <h3>Gouvernance multi-entités &amp; déploiement global</h3>
+          <p>
+            Conception d’un modèle opérationnel sur 8 Maisons (70 initiatives) et refonte des flux pour le déploiement mondial d’une solution auprès de 170 000+ utilisateurs.
+          </p>
+          <span class="case-result">+20 % d’efficacité opérationnelle mesurée</span>
+        </div>
+
+        <div class="case-card">
+          <span class="case-sector">Tech &amp; Mobilité • États-Unis</span>
+          <h3>Pivots stratégiques &amp; structuration commerciale</h3>
+          <p>
+            Conduite de 2 pivots stratégiques (B2C vers B2B/B2B2C), constitution d’un Advisory Board de 9 membres et structuration commerciale en pré-lancement.
+          </p>
+          <span class="case-result">23,6 % de conversion &amp; $150k non dilutifs</span>
+        </div>
+      </div>
+
+      <div class="cases-grid i18n-en">
+        <div class="case-card">
+          <span class="case-sector">Staffing &amp; Services • Switzerland</span>
+          <h3>Workflow audit &amp; target operating co-design</h3>
+          <p>
+            End-to-end audit of recruitment, scheduling, and coordination workflows for an agency handling 500+ placements, reducing fragmented manual steps and supporting scalable growth.
+          </p>
+          <span class="case-result">Target blueprint &amp; phased execution roadmap</span>
+        </div>
+
+        <div class="case-card">
+          <span class="case-sector">Luxury &amp; Enterprise • CAC 40 / Europe</span>
+          <h3>Multi-entity governance &amp; global rollout</h3>
+          <p>
+            Designed an operating model across 8 international Maisons (70 initiatives) and led workflow redesign for a global rollout serving 170,000+ users.
+          </p>
+          <span class="case-result">+20% measured operational efficiency</span>
+        </div>
+
+        <div class="case-card">
+          <span class="case-sector">Tech &amp; Mobility • United States</span>
+          <h3>Strategic pivots &amp; commercial structuring</h3>
+          <p>
+            Led 2 strategic pivots (B2C to B2B/B2B2C), built a 9-member Advisory Board, and structured commercial validation ahead of launch.
+          </p>
+          <span class="case-result">23.6% conversion &amp; $150k non-dilutive grants</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="methode">
+      <div class="section-header i18n-fr">
+        <h2>Comment nous travaillons ensemble</h2>
+      </div>
+      <div class="section-header i18n-en">
+        <h2>How We Work Together</h2>
+      </div>
+
+      <div class="steps-grid i18n-fr">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>Échange de cadrage (20 min)</h3>
+          <p>Un point direct en visio Google Meet pour clarifier votre enjeu, vérifier l’adéquation et cibler le bon format.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>Proposition cadrée sous 24h</h3>
+          <p>Un périmètre lisible : objectifs, livrables concrets, calendrier et budget fixe ou enveloppe d’heures sans surprise.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>Exécution rapide &amp; autonomie</h3>
+          <p>Intervention ciblée avec vos équipes ou supports, restitution actionnable et prise en main directe par votre organisation.</p>
+        </div>
+      </div>
+
+      <div class="steps-grid i18n-en">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>20-Minute Scoping Call</h3>
+          <p>A focused Google Meet session to clarify your challenge, assess mutual fit, and choose the right format.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>Scoped Proposal Within 24h</h3>
+          <p>A clear scope covering objectives, concrete deliverables, timeline, and a transparent fixed fee or hour pack.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>Focused Execution &amp; Handover</h3>
+          <p>Hands-on work with your team or materials, delivering actionable outputs your organization can run with.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="rdv" style="border-bottom: none;">
+      <div class="booking-box">
+        <div>
+          <h2 class="i18n-fr">Planifier un échange de cadrage</h2>
+          <h2 class="i18n-en">Schedule a Discovery Call</h2>
+
+          <p class="i18n-fr">
+            Choisissez un créneau de 20 minutes dans mon agenda. Un lien <strong>Google Meet</strong> est généré automatiquement dès la confirmation.
+          </p>
+          <p class="i18n-en">
+            Pick a 20-minute slot on my calendar. A <strong>Google Meet</strong> link is generated automatically upon confirmation.
+          </p>
+
+          <a href="https://calendar.app.google/YNu6LXN3UTheiBRW9" target="_blank" rel="noopener" class="btn-primary i18n-fr">
+            Choisir un créneau sur Google Agenda ↗
+          </a>
+          <a href="https://calendar.app.google/YNu6LXN3UTheiBRW9" target="_blank" rel="noopener" class="btn-primary i18n-en">
+            Select a Time on Google Calendar ↗
+          </a>
+        </div>
+
+        <div class="booking-meta">
+          <div>
+            <strong class="i18n-fr">Format :</strong>
+            <strong class="i18n-en">Format:</strong>
+            <span>20 min • Google Meet</span>
+          </div>
+          <div>
+            <strong class="i18n-fr">Zone d’intervention :</strong>
+            <strong class="i18n-en">Coverage:</strong>
+            <span class="i18n-fr">Suisse Romande, France &amp; Remote (FR / EN)</span>
+            <span class="i18n-en">Switzerland, France &amp; Remote (EN / FR)</span>
+          </div>
+          <div>
+            <strong>Email :</strong>
+            <a href="mailto:hafidha.ben@gmail.com">hafidha.ben@gmail.com</a>
+          </div>
+          <div>
+            <strong>LinkedIn :</strong>
+            <a href="https://www.linkedin.com/in/hafidhabenyahia" target="_blank" rel="noopener">linkedin.com/in/hafidhabenyahia</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p class="i18n-fr">© 2026 Hafidha Benyahia — Conseil &amp; Advisory B2B • <a href="index.html">Voir le profil Exécutif Santé</a></p>
+      <p class="i18n-en">© 2026 Hafidha Benyahia — B2B Advisory &amp; Consulting • <a href="index.html">View Health Executive Profile</a></p>
+    </footer>
+
+  </div>
+
+  <script>
+    const titles = {
+      fr: "Hafidha Benyahia — Conseil Stratégique, Opérations & Transformation B2B",
+      en: "Hafidha Benyahia — Strategic Advisory, Operations & B2B Transformation"
+    };
+
+    function syncNavOffset() {
+      const nav = document.getElementById("main-nav");
+      if (nav) {
+        document.documentElement.style.setProperty("--nav-height", nav.offsetHeight + "px");
+      }
+    }
+
+    function setLanguage(lang) {
+      const activeLang = lang === "en" ? "en" : "fr";
+      document.documentElement.lang = activeLang;
+      document.body.classList.remove("lang-fr", "lang-en");
+      document.body.classList.add("lang-" + activeLang);
+      document.title = titles[activeLang];
+
+      document.getElementById("tab-fr").classList.toggle("active", activeLang === "fr");
+      document.getElementById("tab-en").classList.toggle("active", activeLang === "en");
+      document.getElementById("tab-fr").setAttribute("aria-pressed", activeLang === "fr");
+      document.getElementById("tab-en").setAttribute("aria-pressed", activeLang === "en");
+
+      closeMobileMenu();
+      syncNavOffset();
+    }
+
+    function toggleMobileMenu(e) {
+      if (e) e.stopPropagation();
+      syncNavOffset();
+      const panel = document.getElementById("nav-menu-panel");
+      const btn = document.getElementById("menu-toggle");
+      if (!panel || !btn) return;
+      const isOpen = panel.classList.toggle("open");
+      btn.setAttribute("aria-expanded", isOpen);
+    }
+
+    function closeMobileMenu() {
+      const panel = document.getElementById("nav-menu-panel");
+      const btn = document.getElementById("menu-toggle");
+      if (panel && panel.classList.contains("open")) {
+        panel.classList.remove("open");
+        if (btn) btn.setAttribute("aria-expanded", "false");
+      }
+    }
+
+    document.getElementById("menu-toggle").addEventListener("click", toggleMobileMenu);
+
+    document.querySelectorAll("#nav-menu-panel a").forEach(link => {
+      link.addEventListener("click", closeMobileMenu);
+    });
+
+    document.addEventListener("click", (e) => {
+      const panel = document.getElementById("nav-menu-panel");
+      const btn = document.getElementById("menu-toggle");
+      if (panel && btn && !panel.contains(e.target) && !btn.contains(e.target)) {
+        closeMobileMenu();
+      }
+    });
+
+    window.addEventListener("resize", syncNavOffset);
+    syncNavOffset();
+  </script>
+
+</body>
+</html>
