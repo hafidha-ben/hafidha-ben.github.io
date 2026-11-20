@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hafidha Benyahia — Stratégie, Innovation, Digitalisation &amp; Application Clinique</title>
-  <meta name="description" content="Hafidha Benyahia : Stratégie, innovation santé, digitalisation, optimisation et application clinique.">
+  <title>Hafidha Benyahia — Conseil Stratégique, Opérations &amp; Transformation B2B</title>
+  <meta name="description" content="Conseil en stratégie, architecture opérationnelle, optimisation des flux et sparring de dirigeants.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -80,7 +80,7 @@
 
     .nav-links {
       display: flex;
-      gap: 1.15rem;
+      gap: 1.1rem;
       align-items: center;
       font-size: 0.85rem;
       font-weight: 500;
@@ -94,11 +94,21 @@
 
     .nav-links a:hover { color: var(--accent); }
 
+    .nav-switch {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      padding: 0.38rem 0.72rem;
+      border-radius: 6px;
+      color: var(--text) !important;
+      font-weight: 600;
+    }
+
     .nav-cta {
       background: var(--accent);
       color: #FFFFFF !important;
       padding: 0.45rem 0.95rem;
       border-radius: 6px;
+      font-weight: 600;
     }
 
     .menu-toggle {
@@ -150,15 +160,13 @@
       color: #FFFFFF;
     }
 
-    @media (max-width: 820px) {
-      .menu-toggle {
-        display: inline-flex;
-      }
+    @media (max-width: 860px) {
+      .menu-toggle { display: inline-flex; }
 
       .nav-menu-panel {
         display: none;
         position: fixed;
-        top: 58px;
+        top: var(--nav-height, 60px);
         left: 0;
         right: 0;
         background: var(--surface);
@@ -168,9 +176,7 @@
         z-index: 101;
       }
 
-      .nav-menu-panel.open {
-        display: block;
-      }
+      .nav-menu-panel.open { display: block; }
 
       .nav-links {
         flex-direction: column;
@@ -184,9 +190,7 @@
         font-size: 0.95rem;
       }
 
-      .nav-links a:last-child {
-        border-bottom: none;
-      }
+      .nav-links a:last-child { border-bottom: none; }
 
       .nav-cta {
         margin-top: 0.45rem;
@@ -206,18 +210,6 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .hero-top {
-      display: grid;
-      grid-template-columns: 1.45fr 0.85fr;
-      gap: 2.5rem;
-      align-items: center;
-      margin-bottom: 3rem;
-    }
-
-    @media (max-width: 820px) {
-      .hero-top { grid-template-columns: 1fr; gap: 2rem; }
-    }
-
     .eyebrow {
       display: inline-block;
       font-size: 0.78rem;
@@ -230,11 +222,12 @@
 
     h1 {
       font-family: var(--font-serif);
-      font-size: clamp(2.5rem, 4.8vw, 3.7rem);
+      font-size: clamp(2.4rem, 4.8vw, 3.65rem);
       font-weight: 600;
       line-height: 1.1;
       letter-spacing: -0.02em;
       margin-bottom: 1.25rem;
+      max-width: 860px;
     }
 
     h1 em { font-style: italic; color: var(--accent); }
@@ -243,92 +236,67 @@
       font-size: 1.08rem;
       color: var(--text-muted);
       margin-bottom: 1.85rem;
+      max-width: 780px;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.8rem;
+      gap: 0.85rem;
+      margin-bottom: 2.75rem;
     }
 
     .btn-primary {
       background: var(--accent);
       color: #FFFFFF;
-      padding: 0.78rem 1.45rem;
+      padding: 0.85rem 1.55rem;
       border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       border: none;
       cursor: pointer;
       display: inline-block;
       transition: opacity 0.2s;
     }
 
-    .btn-primary:hover { opacity: 0.9; }
+    .btn-primary:hover { opacity: 0.92; }
 
     .btn-secondary {
       background: var(--surface);
       color: var(--text);
       border: 1px solid var(--border);
-      padding: 0.78rem 1.45rem;
+      padding: 0.85rem 1.55rem;
       border-radius: 6px;
       text-decoration: none;
       font-weight: 500;
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       display: inline-block;
       transition: border-color 0.2s;
     }
 
     .btn-secondary:hover { border-color: var(--text); }
 
-    .portrait-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 0.65rem;
-      box-shadow: 0 10px 30px rgba(24, 24, 27, 0.04);
-    }
-
-    .portrait-card img {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      object-position: 50% 18%;
-      border-radius: 8px;
-      display: block;
-    }
-
-    .portrait-caption {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      padding: 0.65rem 0.35rem 0.25rem;
-      display: flex;
-      justify-content: space-between;
-      gap: 0.5rem;
-    }
-
-    .metrics-grid {
+    .trust-strip {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 1.25rem;
       padding-top: 2rem;
       border-top: 1px solid var(--border);
     }
 
-    .metric-value {
-      font-family: var(--font-serif);
-      font-size: 2.05rem;
-      font-weight: 700;
+    .trust-item strong {
+      display: block;
+      font-size: 0.92rem;
       color: var(--accent);
-      line-height: 1.1;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.2rem;
     }
 
-    .metric-label {
-      font-size: 0.83rem;
+    .trust-item span {
+      font-size: 0.84rem;
       color: var(--text-muted);
-      line-height: 1.4;
+      line-height: 1.45;
+      display: block;
     }
 
     section {
@@ -340,7 +308,7 @@
 
     h2 {
       font-family: var(--font-serif);
-      font-size: 2.25rem;
+      font-size: 2.2rem;
       font-weight: 600;
       line-height: 1.2;
       margin-bottom: 0.5rem;
@@ -352,291 +320,228 @@
       max-width: 740px;
     }
 
-    .visuals-grid {
+    .offers-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1.5rem;
     }
 
-    .chart-card {
+    .offer-card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.75rem;
-    }
-
-    .chart-card h3 {
-      font-family: var(--font-serif);
-      font-size: 1.4rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-    }
-
-    .chart-sub {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-bottom: 1.25rem;
-    }
-
-    .bar-row { margin-bottom: 1rem; }
-    .bar-label {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.84rem;
-      font-weight: 600;
-      margin-bottom: 0.35rem;
-    }
-
-    .bar-track {
-      height: 10px;
-      background: var(--surface-alt);
-      border-radius: 999px;
-      overflow: hidden;
-    }
-
-    .bar-fill {
-      height: 100%;
-      background: var(--accent);
-      border-radius: 999px;
-    }
-
-    .bar-fill.warm { background: var(--accent-warm); }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.35rem;
-    }
-
-    .project-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.75rem;
+      border-radius: 12px;
+      padding: 2rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
-    .project-kicker {
+    .offer-card.featured {
+      border: 1.5px solid var(--accent);
+      box-shadow: 0 10px 28px rgba(30, 58, 47, 0.06);
+    }
+
+    .offer-tag {
+      display: inline-block;
       font-size: 0.73rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       color: var(--accent-warm);
-      margin-bottom: 0.5rem;
-      display: block;
+      margin-bottom: 0.55rem;
     }
 
-    .project-card h3 {
+    .offer-card h3 {
       font-family: var(--font-serif);
-      font-size: 1.45rem;
+      font-size: 1.55rem;
       font-weight: 600;
-      line-height: 1.25;
+      line-height: 1.2;
       margin-bottom: 0.75rem;
     }
 
-    .project-card p {
+    .offer-problem {
       font-size: 0.9rem;
       color: var(--text-muted);
       margin-bottom: 1.25rem;
     }
 
-    .kpi-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-      padding-top: 0.85rem;
-      border-top: 1px solid var(--border);
+    .offer-list {
+      list-style: none;
+      font-size: 0.88rem;
+      color: var(--text);
+      margin-bottom: 1.5rem;
     }
 
-    .kpi-pill {
-      background: var(--accent-soft);
+    .offer-list li {
+      padding-left: 1.2rem;
+      position: relative;
+      margin-bottom: 0.5rem;
+    }
+
+    .offer-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
       color: var(--accent);
-      font-size: 0.78rem;
-      font-weight: 600;
-      padding: 0.25rem 0.65rem;
-      border-radius: 5px;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 1.25rem;
-    }
-
-    .skill-domain {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.5rem;
-    }
-
-    .skill-domain h3 {
-      font-size: 0.95rem;
       font-weight: 700;
-      color: var(--accent);
-      margin-bottom: 0.85rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border);
     }
 
-    .skill-tags {
+    .offer-footer {
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
       flex-wrap: wrap;
-      gap: 0.45rem;
     }
 
-    .skill-tag {
-      background: var(--surface-alt);
+    .offer-format {
       font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--surface-alt);
       padding: 0.3rem 0.65rem;
       border-radius: 5px;
-      border: 1px solid var(--border);
     }
 
-    .timeline {
-      display: flex;
-      flex-direction: column;
+    .offer-link {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .offer-link:hover { text-decoration: underline; }
+
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.35rem;
+    }
+
+    .case-card {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.75rem;
+    }
+
+    .case-sector {
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-warm);
+      display: block;
+      margin-bottom: 0.45rem;
+    }
+
+    .case-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .case-card p {
+      font-size: 0.89rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .case-result {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      display: inline-block;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1.5rem;
     }
 
-    .timeline-item {
+    .step-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 10px;
-      padding: 1.85rem;
-      display: grid;
-      grid-template-columns: 205px 1fr;
-      gap: 1.75rem;
+      padding: 1.75rem;
     }
 
-    @media (max-width: 720px) {
-      .timeline-item { grid-template-columns: 1fr; gap: 0.65rem; }
+    .step-num {
+      font-family: var(--font-serif);
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--accent-warm);
+      line-height: 1;
+      margin-bottom: 0.6rem;
     }
 
-    .timeline-date { font-weight: 700; color: var(--accent); display: block; margin-bottom: 0.25rem; font-size: 0.85rem; }
-    .timeline-loc { color: var(--text-muted); display: block; font-size: 0.85rem; }
+    .step-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.45rem;
+    }
 
-    .timeline-badge {
-      display: inline-block;
-      margin-top: 0.5rem;
-      font-size: 0.74rem;
-      font-weight: 600;
-      background: var(--surface-alt);
-      border: 1px solid var(--border);
-      padding: 0.2rem 0.55rem;
-      border-radius: 4px;
+    .step-card p {
+      font-size: 0.89rem;
       color: var(--text-muted);
     }
 
-    .timeline-content h3 { font-size: 1.12rem; font-weight: 700; margin-bottom: 0.15rem; }
-    .timeline-org { font-size: 0.92rem; font-weight: 600; color: var(--accent-warm); margin-bottom: 0.85rem; display: block; }
-
-    .timeline-content ul { list-style: none; font-size: 0.91rem; color: var(--text-muted); }
-    .timeline-content ul li { padding-left: 1.15rem; position: relative; margin-bottom: 0.45rem; }
-    .timeline-content ul li::before { content: "•"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
-
-    .awards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 1.25rem;
-    }
-
-    .award-card {
-      background: var(--surface-alt);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.5rem;
-    }
-
-    .award-year { font-size: 0.75rem; font-weight: 700; color: var(--accent-warm); text-transform: uppercase; letter-spacing: 0.05em; }
-    .award-title { font-weight: 700; font-size: 1rem; margin: 0.35rem 0; }
-    .award-desc { font-size: 0.87rem; color: var(--text-muted); }
-
-    .pillars-bar {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.25rem;
-    }
-
-    .pillar-box { border-left: 2px solid var(--accent); padding-left: 1rem; }
-    .pillar-box h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem; }
-    .pillar-box p { font-size: 0.86rem; color: var(--text-muted); }
-
-    .contact-wrapper {
+    .booking-box {
       background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
+      border: 1.5px solid var(--accent);
+      border-radius: 14px;
       padding: 2.5rem;
       display: grid;
-      grid-template-columns: 1.35fr 1fr;
-      gap: 2.5rem;
+      grid-template-columns: 1.45fr 0.85fr;
+      gap: 2.25rem;
       align-items: center;
     }
 
-    @media (max-width: 768px) {
-      .contact-wrapper { grid-template-columns: 1fr; text-align: center; }
+    @media (max-width: 780px) {
+      .booking-box { grid-template-columns: 1fr; }
     }
 
-    .contact-identity {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.25rem;
+    .booking-box h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
     }
 
-    @media (max-width: 768px) {
-      .contact-identity { justify-content: center; text-align: left; }
+    .booking-box p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-size: 0.96rem;
     }
 
-    .contact-avatar {
-      width: 62px;
-      height: 62px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: 50% 18%;
-      border: 2px solid var(--accent);
-      flex-shrink: 0;
-    }
-
-    .contact-identity-name {
-      font-family: var(--font-serif);
-      font-size: 1.45rem;
-      font-weight: 700;
-      line-height: 1.15;
-      color: var(--text);
-    }
-
-    .contact-identity-role {
-      font-size: 0.82rem;
-      color: var(--accent-warm);
-      font-weight: 600;
-    }
-
-    .contact-details p { color: var(--text-muted); margin-bottom: 1.25rem; font-size: 0.95rem; }
-    .direct-links { display: flex; flex-direction: column; gap: 0.55rem; margin-bottom: 1.75rem; font-size: 0.92rem; }
-    .direct-links a { color: var(--text); text-decoration: none; font-weight: 500; }
-    .direct-links a:hover { color: var(--accent); text-decoration: underline; }
-
-    .download-group { display: flex; flex-wrap: wrap; gap: 0.75rem; }
-    @media (max-width: 768px) { .download-group { justify-content: center; } }
-
-    .qr-box {
-      background: var(--bg);
+    .booking-meta {
+      background: var(--surface-alt);
       border: 1px solid var(--border);
       border-radius: 10px;
       padding: 1.5rem;
-      text-align: center;
+      font-size: 0.88rem;
     }
 
-    .qr-box img {
-      width: 175px;
-      height: 175px;
-      background: #FFFFFF;
-      padding: 10px;
-      border-radius: 8px;
-      border: 1px solid var(--border);
+    .booking-meta div {
+      margin-bottom: 0.75rem;
+    }
+
+    .booking-meta div:last-child { margin-bottom: 0; }
+
+    .booking-meta a {
+      color: var(--text);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .booking-meta a:hover {
+      color: var(--accent);
+      text-decoration: underline;
     }
 
     footer {
@@ -645,32 +550,36 @@
       font-size: 0.85rem;
       color: var(--text-muted);
     }
+
+    footer a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body class="lang-fr">
 
-  <nav>
+  <nav id="main-nav">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">Hafidha Benyahia</a>
+      <a href="conseil.html" class="nav-logo">Hafidha Benyahia</a>
 
       <div class="nav-right">
         <div id="nav-menu-panel" class="nav-menu-panel">
           <div class="nav-links i18n-fr">
-            <a href="#vision-clinique">Vision &amp; Impact</a>
-            <a href="#realisations">Réalisations</a>
-            <a href="#competences">Compétences</a>
-            <a href="#parcours">Parcours</a>
-            <a href="#certificats">Certificats</a>
-            <a href="#contact" class="nav-cta">Contact</a>
+            <a href="#offres">Offres</a>
+            <a href="#cas-clients">Références</a>
+            <a href="#methode">Méthode</a>
+            <a href="index.html" class="nav-switch">Profil Exécutif Santé ↗</a>
+            <a href="#rdv" class="nav-cta">Prendre RDV</a>
           </div>
 
           <div class="nav-links i18n-en">
-            <a href="#vision-clinique">Vision &amp; Impact</a>
-            <a href="#realisations">Achievements</a>
-            <a href="#competences">Skills</a>
-            <a href="#parcours">Experience</a>
-            <a href="#certificats">Credentials</a>
-            <a href="#contact" class="nav-cta">Contact</a>
+            <a href="#offres">Services</a>
+            <a href="#cas-clients">Track Record</a>
+            <a href="#methode">Approach</a>
+            <a href="index.html" class="nav-switch">Health Executive Profile ↗</a>
+            <a href="#rdv" class="nav-cta">Book a Call</a>
           </div>
         </div>
 
@@ -678,9 +587,9 @@
           Menu ☰
         </button>
 
-        <div class="lang-tabs" role="tablist" aria-label="Language selector">
-          <button type="button" id="tab-fr" class="lang-tab active" role="tab" aria-selected="true" onclick="setLanguage('fr')">FR</button>
-          <button type="button" id="tab-en" class="lang-tab" role="tab" aria-selected="false" onclick="setLanguage('en')">EN</button>
+        <div class="lang-tabs" aria-label="Language selector">
+          <button type="button" id="tab-fr" class="lang-tab active" aria-pressed="true" onclick="setLanguage('fr')">FR</button>
+          <button type="button" id="tab-en" class="lang-tab" aria-pressed="false" onclick="setLanguage('en')">EN</button>
         </div>
       </div>
     </div>
@@ -689,957 +598,432 @@
   <div class="container">
 
     <header class="hero">
-      <div class="hero-top">
-        <div>
-          <span class="eyebrow i18n-fr">Stratégie • Innovation Santé • Digitalisation • Optimisation • Clinique</span>
-          <span class="eyebrow i18n-en">Strategy • Health Innovation • Digitalization • Optimization • Clinical</span>
+      <span class="eyebrow i18n-fr">Conseil Stratégique • Architecture Opérationnelle • Sparring Dirigeants</span>
+      <span class="eyebrow i18n-en">Strategic Advisory • Operating Models • Executive Sparring</span>
 
-          <h1 class="i18n-fr">De la clinique à la <em>stratégie</em>, l’innovation qui s’ancre vraiment.</h1>
-          <h1 class="i18n-en">From bedside to <em>strategy</em>, innovation that truly takes root.</h1>
+      <h1 class="i18n-fr">Structurer vos opérations et sécuriser vos décisions <em>sans alourdir</em> votre organisation.</h1>
+      <h1 class="i18n-en">Streamline operations and de-risk critical decisions <em>without adding</em> organizational overhead.</h1>
 
-          <p class="hero-lead i18n-fr">
-            Infirmière de formation en soins aigus, fondatrice de startup en santé/mobilité et manager en transformation, j’accompagne la stratégie, l’innovation, la digitalisation, l’optimisation et l’application clinique en santé : <strong>80 % des innovations en santé ne survivent pas après 3 ans principalement à cause du manque de caractérisation de besoin clinique</strong>.
-          </p>
-          <p class="hero-lead i18n-en">
-            Acute-care trained nurse, health/mobility startup founder, and transformation manager: I work across strategy, innovation, digitalization, optimization, and clinical application in healthcare—where <strong>80% of health innovations do not survive past 3 years primarily due to a lack of <em>clinical need characterisation</em></strong>.
-          </p>
+      <p class="hero-lead i18n-fr">
+        Ex-Manager Strategy &amp; Transformation (Capgemini Invent) et ex-CEO (Los Angeles), j’accompagne les fondateurs, dirigeants de PME/ETI et équipes projets sur le cadrage stratégique, l’optimisation des flux opérationnels et le challenge critique de vos dossiers clés.
+      </p>
+      <p class="hero-lead i18n-en">
+        Former Strategy &amp; Transformation Manager (Capgemini Invent) and startup CEO (Los Angeles), I partner with founders, SME leaders, and project teams on strategic framing, workflow optimization, and critical review of high-stakes deliverables.
+      </p>
 
-          <div class="hero-actions i18n-fr">
-            <a href="Hafidha_Benyahia_CV.pdf" download class="btn-primary">Télécharger mon CV (PDF)</a>
-            <a href="#contact" class="btn-secondary">Enregistrer ma vCard</a>
-            <a href="https://www.linkedin.com/in/hafidhabenyahia" target="_blank" rel="noopener" class="btn-secondary">LinkedIn ↗</a>
-          </div>
-          <div class="hero-actions i18n-en">
-            <a href="Hafidha_Benyahia_CV.pdf" download class="btn-primary">Download CV (PDF)</a>
-            <a href="#contact" class="btn-secondary">Save vCard</a>
-            <a href="https://www.linkedin.com/in/hafidhabenyahia" target="_blank" rel="noopener" class="btn-secondary">LinkedIn ↗</a>
-          </div>
+      <div class="hero-actions i18n-fr">
+        <a href="COLLER_TON_LIEN_GOOGLE_AGENDA_ICI" target="_blank" rel="noopener" class="btn-primary">Réserver un échange (20 min — Google Meet)</a>
+        <a href="#offres" class="btn-secondary">Découvrir les formats d’intervention</a>
+      </div>
+      <div class="hero-actions i18n-en">
+        <a href="COLLER_TON_LIEN_GOOGLE_AGENDA_ICI" target="_blank" rel="noopener" class="btn-primary">Book a 20-min Discovery Call (Google Meet)</a>
+        <a href="#offres" class="btn-secondary">Explore Service Formats</a>
+      </div>
+
+      <div class="trust-strip i18n-fr">
+        <div class="trust-item">
+          <strong>Ex-Capgemini Invent</strong>
+          <span>Manager Strategy &amp; Transformation (Zurich &amp; Europe)</span>
         </div>
-
-        <div class="portrait-card">
-          <img id="hero-portrait" src="HAFIDHA-BENYAHIA-001-Marie-Elise-Studio-Photo.jpg" alt="Hafidha Benyahia">
-          <div class="portrait-caption">
-            <span><strong>Hafidha Benyahia</strong></span>
-            <span class="i18n-fr">Stratégie &amp; Santé</span>
-            <span class="i18n-en">Strategy &amp; Health</span>
-          </div>
+        <div class="trust-item">
+          <strong>Ex-CEO &amp; Fondatrice</strong>
+          <span>Pilotage P&amp;L, 2 pivots B2B/B2B2C &amp; financements non dilutifs (USA)</span>
+        </div>
+        <div class="trust-item">
+          <strong>Approche Pragmatique</strong>
+          <span>Livrables actionnables, zéro jargon inutile, ancrage terrain</span>
         </div>
       </div>
 
-      <div class="metrics-grid i18n-fr">
-        <div class="metric-item">
-          <div class="metric-value">80 %</div>
-          <div class="metric-label">Innovations santé ne survivant pas après 3 ans faute de caractérisation de besoin clinique</div>
+      <div class="trust-strip i18n-en">
+        <div class="trust-item">
+          <strong>Ex-Capgemini Invent</strong>
+          <span>Strategy &amp; Transformation Manager (Zurich &amp; Europe)</span>
         </div>
-        <div class="metric-item">
-          <div class="metric-value">10 mois</div>
-          <div class="metric-label">Promotion de Senior Consultant à Manager (Capgemini Invent)</div>
+        <div class="trust-item">
+          <strong>Former CEO &amp; Founder</strong>
+          <span>Full P&amp;L ownership, 2 B2B/B2B2C pivots &amp; non-dilutive grants (US)</span>
         </div>
-        <div class="metric-item">
-          <div class="metric-value">+20 %</div>
-          <div class="metric-label">Gain d’efficacité opérationnelle sur des flux métiers critiques</div>
-        </div>
-        <div class="metric-item">
-          <div class="metric-value">97,5 %</div>
-          <div class="metric-label">Précision clinique d’une IA vocale médicale co-conçue (Elsevier)</div>
-        </div>
-        <div class="metric-item">
-          <div class="metric-value">$10M+</div>
-          <div class="metric-label">Capitaux VC levés par les startups accélérées (Cedars-Sinai × Techstars)</div>
-        </div>
-      </div>
-
-      <div class="metrics-grid i18n-en">
-        <div class="metric-item">
-          <div class="metric-value">80%</div>
-          <div class="metric-label">Health innovations failing past 3 years mainly due to weak <em>clinical need characterisation</em></div>
-        </div>
-        <div class="metric-item">
-          <div class="metric-value">10 mos</div>
-          <div class="metric-label">Accelerated promotion from Senior Consultant to Manager (Capgemini Invent)</div>
-        </div>
-        <div class="metric-item">
-          <div class="metric-value">+20%</div>
-          <div class="metric-label">Operational efficiency gain delivered on critical workflows</div>
-        </div>
-        <div class="metric-item">
-          <div class="metric-value">97.5%</div>
-          <div class="metric-label">Clinical accuracy of a co-designed voice AI triage platform (Elsevier)</div>
-        </div>
-        <div class="metric-item">
-          <div class="metric-value">$10M+</div>
-          <div class="metric-label">VC funding raised by accelerated startups (Cedars-Sinai × Techstars)</div>
+        <div class="trust-item">
+          <strong>Pragmatic Execution</strong>
+          <span>Actionable deliverables, zero fluff, grounded in field reality</span>
         </div>
       </div>
     </header>
 
-    <section id="vision-clinique">
+    <section id="offres">
       <div class="section-header i18n-fr">
-        <h2>Pourquoi l’ancrage clinique et l’optimisation font la différence</h2>
+        <h2>Catalogue d’Offres &amp; Formats d’Intervention</h2>
         <p class="section-desc">
-          Déployer une innovation ou digitaliser sans caractériser finement le besoin clinique réel ni optimiser les usages fragilise l’adoption. Mon approche relie stratégie, innovation, digitalisation, optimisation et application clinique.
+          Des formats calibrés selon votre besoin : du second regard rapide sur un dossier stratégique jusqu’au sprint de refonte opérationnelle.
         </p>
       </div>
       <div class="section-header i18n-en">
-        <h2>Why clinical grounding and optimization drive survival</h2>
+        <h2>Service Catalog &amp; Engagement Formats</h2>
         <p class="section-desc">
-          Launching innovations or digital tools without rigorous clinical need characterisation and workflow optimization undermines real adoption. My work connects strategy, innovation, digitalization, optimization, and clinical application.
+          Modular formats tailored to your stage: from a rapid second-opinion review to a structured operational redesign sprint.
         </p>
       </div>
 
-      <div class="visuals-grid">
-        <div class="chart-card">
-          <h3 class="i18n-fr">Réalité d’adoption en innovation santé</h3>
-          <h3 class="i18n-en">3-year health innovation survival reality</h3>
-          <p class="chart-sub i18n-fr">Repère à 3 ans &amp; rôle de la caractérisation de besoin clinique</p>
-          <p class="chart-sub i18n-en">3-year benchmark &amp; role of <em>clinical need characterisation</em></p>
-
-          <div style="display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;">
-            <svg width="130" height="130" viewBox="0 0 130 130" aria-label="80% survival gap chart">
-              <circle cx="65" cy="65" r="48" fill="none" stroke="#E4E2DD" stroke-width="16"/>
-              <circle cx="65" cy="65" r="48" fill="none" stroke="#9A5B3E" stroke-width="16"
-                stroke-dasharray="241 301.6" stroke-dashoffset="75.4" transform="rotate(-90 65 65)"/>
-              <text x="65" y="62" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="24" font-weight="700" fill="#18181B">80%</text>
-              <text x="65" y="79" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="9.5" fill="#52525B">3 yrs</text>
-            </svg>
-            <div style="flex:1;min-width:170px;font-size:0.88rem;color:var(--text-muted);" class="i18n-fr">
-              <p style="margin-bottom:0.5rem;"><strong style="color:var(--accent-warm);">80 %</strong> ne survivent pas après 3 ans, principalement faute de caractérisation de besoin clinique.</p>
-              <p><strong style="color:var(--accent);">20 %</strong> pérennisent via l’application clinique, l’optimisation et l’exécution.</p>
-            </div>
-            <div style="flex:1;min-width:170px;font-size:0.88rem;color:var(--text-muted);" class="i18n-en">
-              <p style="margin-bottom:0.5rem;"><strong style="color:var(--accent-warm);">80%</strong> do not survive past 3 years, largely due to weak <em>clinical need characterisation</em>.</p>
-              <p><strong style="color:var(--accent);">20%</strong> sustain impact through clinical application, optimization, and execution.</p>
-            </div>
+      <div class="offers-grid i18n-fr">
+        <div class="offer-card">
+          <div>
+            <span class="offer-tag">Format 01 • Ponctuel (48–72h)</span>
+            <h3>Flash Review &amp; Second Regard</h3>
+            <p class="offer-problem">
+              Avant d’envoyer une proposition commerciale majeure, un pitch ou un dossier interne structurant, validez sa clarté, sa logique et ses angles morts.
+            </p>
+            <ul class="offer-list">
+              <li>Relecture critique structurée (proposition de valeur, cohérence, failles)</li>
+              <li>Annotations directes et suggestions de reformulation sur le document</li>
+              <li>Session de débriefing et challenge (45 à 60 min en visio)</li>
+            </ul>
           </div>
-
-          <svg width="100%" height="95" viewBox="0 0 360 95" role="img" aria-label="Adoption curve">
-            <line x1="20" y1="80" x2="345" y2="80" stroke="#E4E2DD" stroke-width="1.5"/>
-            <line x1="20" y1="15" x2="20" y2="80" stroke="#E4E2DD" stroke-width="1.5"/>
-            <path d="M 25 32 Q 110 22, 180 58 T 340 74" fill="none" stroke="#9A5B3E" stroke-width="2.5" stroke-dasharray="5,4"/>
-            <path d="M 25 58 Q 115 48, 210 28 T 340 16" fill="none" stroke="#1E3A2F" stroke-width="3"/>
-            <text x="200" y="14" font-family="Plus Jakarta Sans, sans-serif" font-size="10" font-weight="600" fill="#1E3A2F">Clinical need &amp; fit</text>
-            <text x="195" y="72" font-family="Plus Jakarta Sans, sans-serif" font-size="10" fill="#9A5B3E">80% drop-off risk</text>
-          </svg>
+          <div class="offer-footer">
+            <span class="offer-format">À l’acte ou carnet d’heures</span>
+            <a href="#rdv" class="offer-link">Cadrer un dossier →</a>
+          </div>
         </div>
 
-        <div class="chart-card">
-          <h3 class="i18n-fr">Impact chiffré sur les leviers clés</h3>
-          <h3 class="i18n-en">Measured impact across key levers</h3>
-          <p class="chart-sub i18n-fr">Stratégie, innovation, optimisation et application clinique</p>
-          <p class="chart-sub i18n-en">Strategy, innovation, optimization, and clinical application</p>
-
-          <div class="bar-row">
-            <div class="bar-label">
-              <span class="i18n-fr">Précision clinique IA vocale (CardioCube / Elsevier)</span>
-              <span class="i18n-en">Clinical accuracy — Voice AI triage (Elsevier)</span>
-              <span>97,5%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:97.5%;"></div></div>
+        <div class="offer-card featured">
+          <div>
+            <span class="offer-tag">Format 02 • Sprint 2 à 4 semaines</span>
+            <h3>Diagnostic Opérationnel &amp; Flux</h3>
+            <p class="offer-problem">
+              Votre activité est ralentie par des ressaisies manuelles (tableurs, messageries, emails), des ruptures de charge ou un manque de lisibilité entre équipes.
+            </p>
+            <ul class="offer-list">
+              <li>Cartographie des flux réels (<em>As-Is</em>) et mesure des frictions</li>
+              <li>Schéma cible simplifié (<em>To-Be</em>) et clarification des responsabilités</li>
+              <li>Plan d’action priorisé distinguant gains rapides et chantiers de fond</li>
+            </ul>
           </div>
-
-          <div class="bar-row">
-            <div class="bar-label">
-              <span class="i18n-fr">Gain d’efficacité opérationnelle (Life Sciences)</span>
-              <span class="i18n-en">Operational efficiency gain (Life Sciences)</span>
-              <span>+20%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:65%;"></div></div>
+          <div class="offer-footer">
+            <span class="offer-format">Forfait sprint cadré</span>
+            <a href="#rdv" class="offer-link">Planifier un diagnostic →</a>
           </div>
+        </div>
 
-          <div class="bar-row">
-            <div class="bar-label">
-              <span class="i18n-fr">Gain de productivité après audit ergonomique (Schrader)</span>
-              <span class="i18n-en">Productivity gain post-ergonomic audit (Schrader)</span>
-              <span>+10%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill warm" style="width:45%;"></div></div>
+        <div class="offer-card">
+          <div>
+            <span class="offer-tag">Format 03 • Accompagnement Dirigeant</span>
+            <h3>Sparring Stratégique &amp; Gouvernance</h3>
+            <p class="offer-problem">
+              En phase de pivot, de structuration d’offre ou de charge décisionnelle élevée, confrontez vos arbitrages avec un regard exigeant et pragmatique.
+            </p>
+            <ul class="offer-list">
+              <li>Arbitrages stratégiques, priorisation et cadrage d’offres</li>
+              <li>Clarification de gouvernance, délégation et rituels de pilotage</li>
+              <li>Compte rendu décisionnel synthétique après chaque échange</li>
+            </ul>
           </div>
+          <div class="offer-footer">
+            <span class="offer-format">Mensuel (engagement 3 mois)</span>
+            <a href="#rdv" class="offer-link">Échanger sur vos enjeux →</a>
+          </div>
+        </div>
 
-          <div class="bar-row" style="margin-bottom:0;">
-            <div class="bar-label">
-              <span class="i18n-fr">Conversion clients pré-lancement (RideSVP / Colleag)</span>
-              <span class="i18n-en">Pre-launch customer conversion (RideSVP / Colleag)</span>
-              <span>23,6%</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill warm" style="width:72%;"></div></div>
+        <div class="offer-card">
+          <div>
+            <span class="offer-tag">Format 04 • Transformation &amp; PMO</span>
+            <h3>Target Operating Model &amp; Déploiement</h3>
+            <p class="offer-problem">
+              Vous déployez un nouvel outil ou réorganisez plusieurs équipes et devez sécuriser l’adoption concrète sur le terrain sans désorganiser le quotidien.
+            </p>
+            <ul class="offer-list">
+              <li>Architecture du modèle opérationnel cible (processus, gouvernance, KPIs)</li>
+              <li>Alignement entre besoins métiers, partenaires techniques et utilisateurs</li>
+              <li>Pilotage PMO, recette (UAT) et accompagnement de l’adoption</li>
+            </ul>
+          </div>
+          <div class="offer-footer">
+            <span class="offer-format">Mission sur-mesure / TJM</span>
+            <a href="#rdv" class="offer-link">Discuter du périmètre →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="offers-grid i18n-en">
+        <div class="offer-card">
+          <div>
+            <span class="offer-tag">Format 01 • On-Demand (48–72h)</span>
+            <h3>Flash Review &amp; Critical Second Opinion</h3>
+            <p class="offer-problem">
+              Before sending a high-stakes client proposal, pitch, or internal strategy memo, stress-test its clarity, logic, and blind spots.
+            </p>
+            <ul class="offer-list">
+              <li>Structured critical review (value clarity, flow, gaps)</li>
+              <li>Direct line-by-line comments and targeted wording improvements</li>
+              <li>Live challenge and debrief session (45–60 min video call)</li>
+            </ul>
+          </div>
+          <div class="offer-footer">
+            <span class="offer-format">Per deliverable or hour pack</span>
+            <a href="#rdv" class="offer-link">Scope a review →</a>
+          </div>
+        </div>
+
+        <div class="offer-card featured">
+          <div>
+            <span class="offer-tag">Format 02 • 2 to 4-Week Sprint</span>
+            <h3>Operational &amp; Workflow Diagnostic</h3>
+            <p class="offer-problem">
+              Growth is slowed down by manual workarounds (spreadsheets, chat threads, duplicate entry) and handoff friction across teams.
+            </p>
+            <ul class="offer-list">
+              <li>End-to-end <em>As-Is</em> workflow mapping and friction identification</li>
+              <li>Streamlined <em>To-Be</em> operational design and ownership clarity</li>
+              <li>Prioritized roadmap separating quick wins from structural work</li>
+            </ul>
+          </div>
+          <div class="offer-footer">
+            <span class="offer-format">Fixed-scope sprint</span>
+            <a href="#rdv" class="offer-link">Book a diagnostic →</a>
+          </div>
+        </div>
+
+        <div class="offer-card">
+          <div>
+            <span class="offer-tag">Format 03 • Executive Advisory</span>
+            <h3>Strategic Sparring &amp; Governance</h3>
+            <p class="offer-problem">
+              Navigating a pivot, offer redesign, or heavy decision load? Stress-test trade-offs with a candid, execution-focused partner.
+            </p>
+            <ul class="offer-list">
+              <li>Strategic trade-offs, prioritization, and offer framing</li>
+              <li>Governance clarity, delegation, and operating rhythm</li>
+              <li>Written decision summary after every working session</li>
+            </ul>
+          </div>
+          <div class="offer-footer">
+            <span class="offer-format">Monthly retainer (3-mo min.)</span>
+            <a href="#rdv" class="offer-link">Discuss your priorities →</a>
+          </div>
+        </div>
+
+        <div class="offer-card">
+          <div>
+            <span class="offer-tag">Format 04 • Transformation &amp; PMO</span>
+            <h3>Target Operating Model &amp; Rollout</h3>
+            <p class="offer-problem">
+              Rolling out a new tool or restructuring teams while protecting day-to-day execution and frontline adoption.
+            </p>
+            <ul class="offer-list">
+              <li>Target Operating Model (TOM): processes, governance, KPIs</li>
+              <li>Alignment across business leads, technical partners, and end users</li>
+              <li>PMO tracking, UAT readiness, and adoption support</li>
+            </ul>
+          </div>
+          <div class="offer-footer">
+            <span class="offer-format">Custom mandate / Day rate</span>
+            <a href="#rdv" class="offer-link">Scope a mandate →</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="realisations">
+    <section id="cas-clients">
       <div class="section-header i18n-fr">
-        <h2>Réalisations Clés &amp; Projets Chiffrés</h2>
+        <h2>Références &amp; Problématiques Résolues</h2>
         <p class="section-desc">
-          Stratégie, innovation, digitalisation, optimisation et application clinique au service d’un impact mesurable.
+          Des interventions menées auprès d’acteurs de services en Suisse, de groupes internationaux et de structures en croissance.
         </p>
       </div>
       <div class="section-header i18n-en">
-        <h2>Key Achievements &amp; Quantified Projects</h2>
+        <h2>Selected Track Record Across Industries</h2>
         <p class="section-desc">
-          Strategy, innovation, digitalization, optimization, and clinical application delivering measurable outcomes.
+          Mandates spanning Swiss service operators, global enterprises, and growing ventures.
         </p>
       </div>
 
-      <div class="projects-grid i18n-fr">
-        <div class="project-card">
-          <div>
-            <span class="project-kicker">Stratégie Santé &amp; Digitalisation</span>
-            <h3>Commercialisation &amp; Segmentation Patients</h3>
-            <p>
-              Pilotage de stratégies d’accès au marché, d’évaluation de maturité commerciale et de segmentation patients pour <strong>Roche Diabetes Care</strong>, en articulant valeur clinique, digitalisation et parcours de soins.
-            </p>
-          </div>
-          <div class="kpi-pills">
-            <span class="kpi-pill">+20 % efficacité op.</span>
-            <span class="kpi-pill">Stratégie Santé</span>
-            <span class="kpi-pill">Parcours Patients</span>
-          </div>
+      <div class="cases-grid i18n-fr">
+        <div class="case-card">
+          <span class="case-sector">Services &amp; Placement • Suisse</span>
+          <h3>Audit de flux &amp; co-design d’organisation cible</h3>
+          <p>
+            Diagnostic complet des processus de recrutement, de planification et de coordination d’une structure gérant plus de 500 missions, afin de réduire les tâches manuelles dispersées et sécuriser la montée en charge.
+          </p>
+          <span class="case-result">Architecture cible &amp; feuille de route opérationnelle</span>
         </div>
 
-        <div class="project-card">
-          <div>
-            <span class="project-kicker">Innovation IA &amp; Application Clinique</span>
-            <h3>Plateforme IA Vocale de Triage Médical</h3>
-            <p>
-              Au sein de Cedars-Sinai Accelerator × Techstars, co-conception, protocoles UAT en milieu hospitalier et évaluation clinique d’une solution d’IA vocale (CardioCube) pour l’application médicale terrain.
-            </p>
-          </div>
-          <div class="kpi-pills">
-            <span class="kpi-pill">97,5 % précision clinique</span>
-            <span class="kpi-pill">Publié Elsevier</span>
-            <span class="kpi-pill">10+ startups</span>
-          </div>
+        <div class="case-card">
+          <span class="case-sector">Luxe &amp; Industrie • CAC 40 / Europe</span>
+          <h3>Gouvernance multi-entités &amp; déploiement global</h3>
+          <p>
+            Conception d’un modèle opérationnel sur 8 Maisons (70 initiatives) et refonte des flux pour le déploiement mondial d’une solution auprès de 170 000+ utilisateurs.
+          </p>
+          <span class="case-result">+20 % d’efficacité opérationnelle mesurée</span>
         </div>
 
-        <div class="project-card">
-          <div>
-            <span class="project-kicker">Stratégie &amp; Optimisation</span>
-            <h3>Modèle Opérationnel Cible &amp; Feuille de Route</h3>
-            <p>
-              Définition d’une architecture opérationnelle cible pluriannuelle pour un leader mondial du luxe afin d’optimiser la gouvernance, clarifier les priorités et aligner les organisations sur leurs enjeux stratégiques.
-            </p>
-          </div>
-          <div class="kpi-pills">
-            <span class="kpi-pill">70 initiatives</span>
-            <span class="kpi-pill">8 Maisons</span>
-            <span class="kpi-pill">Optimisation</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div>
-            <span class="project-kicker">Digitalisation &amp; Adoption</span>
-            <h3>Déploiement Mondial &amp; Optimisation des Flux</h3>
-            <p>
-              Direction de la refonte des flux opérationnels et du déploiement à grande échelle d’une transformation digitale pour un groupe du CAC 40, avec un focus constant sur l’adoption réelle par les utilisateurs.
-            </p>
-          </div>
-          <div class="kpi-pills">
-            <span class="kpi-pill">170 000+ utilisateurs</span>
-            <span class="kpi-pill">CAC 40</span>
-            <span class="kpi-pill">Digitalisation</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div>
-            <span class="project-kicker">Innovation Produit &amp; Entrepreneuriat</span>
-            <h3>Création &amp; Scaling de RideSVP Inc. (Colleag)</h3>
-            <p>
-              Fondation à Los Angeles, structuration d’une équipe pluridisciplinaire et d’un Advisory Board de 9 membres, 2 pivots stratégiques (C2C vers B2B/B2B2C) et partenariats avec LADOT et le World Economic Forum.
-            </p>
-          </div>
-          <div class="kpi-pills">
-            <span class="kpi-pill">2 500+ leads</span>
-            <span class="kpi-pill">550 clients (23,6 %)</span>
-            <span class="kpi-pill">$150k subvention</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div>
-            <span class="project-kicker">Optimisation &amp; Prévention</span>
-            <h3>Audit Ergonomique &amp; Optimisation de Poste</h3>
-            <p>
-              Audit des risques et de l’organisation sur un site de 500+ collaborateurs (Schrader SA) via analyse des causes racines (Ishikawa), conduisant à une optimisation concrète des conditions de travail et de l’exécution.
-            </p>
-          </div>
-          <div class="kpi-pills">
-            <span class="kpi-pill">+10 % productivité</span>
-            <span class="kpi-pill">500+ postes</span>
-            <span class="kpi-pill">Prix Meilleure Suggestion</span>
-          </div>
+        <div class="case-card">
+          <span class="case-sector">Tech &amp; Mobilité • États-Unis</span>
+          <h3>Pivots stratégiques &amp; structuration commerciale</h3>
+          <p>
+            Conduite de 2 pivots stratégiques (B2C vers B2B/B2B2C), constitution d’un Advisory Board de 9 membres et structuration commerciale en pré-lancement.
+          </p>
+          <span class="case-result">23,6 % de conversion &amp; $150k non dilutifs</span>
         </div>
       </div>
 
-      <div class="projects-grid i18n-en">
-        <div class="project-card">
-          <div>
-            <span class="project-kicker">Health Strategy &amp; Digitalization</span>
-            <h3>Commercialization &amp; Patient Segmentation</h3>
-            <p>
-              Led market access strategies, commercial readiness assessments, and patient segmentation for <strong>Roche Diabetes Care</strong>, aligning clinical value, digitalization, and care pathways.
-            </p>
-          </div>
-          <div class="kpi-pills">
-            <span class="kpi-pill">+20% efficiency</span>
-            <span class="kpi-pill">Health Strategy</span>
-            <span class="kpi-pill">Patient Pathways</span>
-          </div>
+      <div class="cases-grid i18n-en">
+        <div class="case-card">
+          <span class="case-sector">Staffing &amp; Services • Switzerland</span>
+          <h3>Workflow audit &amp; target operating co-design</h3>
+          <p>
+            End-to-end audit of recruitment, scheduling, and coordination workflows for an agency handling 500+ placements, reducing fragmented manual steps and supporting scalable growth.
+          </p>
+          <span class="case-result">Target blueprint &amp; phased execution roadmap</span>
         </div>
 
-        <div class="project-card">
-          <div>
-            <span class="project-kicker">AI Innovation &amp; Clinical Application</span>
-            <h3>Voice AI Platform for Medical Triage</h3>
-            <p>
-              At Cedars-Sinai Accelerator × Techstars, co-designed hospital UAT protocols and conducted clinical evaluation of a voice AI solution (CardioCube) for clinical application.
-            </p>
-          </div>
-          <div class="kpi-pills">
-            <span class="kpi-pill">97.5% clinical accuracy</span>
-            <span class="kpi-pill">Elsevier Published</span>
-            <span class="kpi-pill">10+ startups</span>
-          </div>
+        <div class="case-card">
+          <span class="case-sector">Luxury &amp; Enterprise • CAC 40 / Europe</span>
+          <h3>Multi-entity governance &amp; global rollout</h3>
+          <p>
+            Designed an operating model across 8 international Maisons (70 initiatives) and led workflow redesign for a global rollout serving 170,000+ users.
+          </p>
+          <span class="case-result">+20% measured operational efficiency</span>
         </div>
 
-        <div class="project-card">
-          <div>
-            <span class="project-kicker">Strategy &amp; Optimization</span>
-            <h3>Target Operating Model &amp; Roadmap</h3>
-            <p>
-              Architected a multi-year operating model for a global luxury group to optimize governance, streamline priorities, and align operations with strategic objectives.
-            </p>
-          </div>
-          <div class="kpi-pills">
-            <span class="kpi-pill">70 initiatives</span>
-            <span class="kpi-pill">8 Maisons</span>
-            <span class="kpi-pill">Optimization</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div>
-            <span class="project-kicker">Digitalization &amp; Adoption</span>
-            <h3>Global Rollout &amp; Workflow Optimization</h3>
-            <p>
-              Led workflow optimization and large-scale digital rollout for a CAC 40 enterprise, focusing on real-world user adoption and operational continuity.
-            </p>
-          </div>
-          <div class="kpi-pills">
-            <span class="kpi-pill">170,000+ users</span>
-            <span class="kpi-pill">CAC 40</span>
-            <span class="kpi-pill">Digitalization</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div>
-            <span class="project-kicker">Product Innovation &amp; Venture</span>
-            <h3>Founding &amp; Scaling RideSVP Inc. (Colleag)</h3>
-            <p>
-              Founded in Los Angeles, built a cross-functional team and a 9-member Advisory Board, executed 2 strategic pivots (C2C to B2B/B2B2C), and secured LADOT and World Economic Forum partnerships.
-            </p>
-          </div>
-          <div class="kpi-pills">
-            <span class="kpi-pill">2,500+ organic leads</span>
-            <span class="kpi-pill">550 users (23.6%)</span>
-            <span class="kpi-pill">$150k grant</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div>
-            <span class="project-kicker">Optimization &amp; Prevention</span>
-            <h3>Ergonomic Audit &amp; Workstation Optimization</h3>
-            <p>
-              Conducted risk and workstation audits across a 500+ employee facility (Schrader SA) using root-cause analysis (Ishikawa), driving practical workstation and workflow optimization.
-            </p>
-          </div>
-          <div class="kpi-pills">
-            <span class="kpi-pill">+10% productivity</span>
-            <span class="kpi-pill">500+ workstations</span>
-            <span class="kpi-pill">Best Suggestion Award</span>
-          </div>
+        <div class="case-card">
+          <span class="case-sector">Tech &amp; Mobility • United States</span>
+          <h3>Strategic pivots &amp; commercial structuring</h3>
+          <p>
+            Led 2 strategic pivots (B2C to B2B/B2B2C), built a 9-member Advisory Board, and structured commercial validation ahead of launch.
+          </p>
+          <span class="case-result">23.6% conversion &amp; $150k non-dilutive grants</span>
         </div>
       </div>
     </section>
 
-    <section id="competences">
+    <section id="methode">
       <div class="section-header i18n-fr">
-        <h2>Compétences &amp; Méthodologies</h2>
-        <p class="section-desc">
-          Un savoir-faire transversal couvrant stratégie, innovation, digitalisation, optimisation et application clinique.
-        </p>
+        <h2>Comment nous travaillons ensemble</h2>
       </div>
       <div class="section-header i18n-en">
-        <h2>Skills &amp; Methodologies</h2>
-        <p class="section-desc">
-          Cross-functional expertise across strategy, innovation, digitalization, optimization, and clinical application.
-        </p>
+        <h2>How We Work Together</h2>
       </div>
 
-      <div class="skills-grid i18n-fr">
-        <div class="skill-domain">
-          <h3>Stratégie &amp; Innovation</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Caractérisation de besoin clinique</span>
-            <span class="skill-tag">Stratégie &amp; Gouvernance</span>
-            <span class="skill-tag">Pilotage PMO &amp; Portefeuille</span>
-            <span class="skill-tag">Market Access &amp; Go-to-Market</span>
-            <span class="skill-tag">Due Diligence Innovation</span>
-          </div>
+      <div class="steps-grid i18n-fr">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>Échange de cadrage (20 min)</h3>
+          <p>Un point direct en visio Google Meet pour clarifier votre enjeu, vérifier l’adéquation et cibler le bon format.</p>
         </div>
-        <div class="skill-domain">
-          <h3>Digitalisation &amp; Optimisation</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Digitalisation</span>
-            <span class="skill-tag">Optimisation Opérationnelle</span>
-            <span class="skill-tag">Scaled Agile (SAFe® 6.0)</span>
-            <span class="skill-tag">Lean &amp; Ishikawa (RCA)</span>
-            <span class="skill-tag">UAT &amp; Conduite du changement</span>
-          </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>Proposition cadrée sous 24h</h3>
+          <p>Un périmètre lisible : objectifs, livrables concrets, calendrier et budget fixe ou enveloppe d’heures sans surprise.</p>
         </div>
-        <div class="skill-domain">
-          <h3>Application Clinique &amp; Santé</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Application Clinique</span>
-            <span class="skill-tag">Soins Aigus &amp; Urgences</span>
-            <span class="skill-tag">Parcours Patients &amp; Soins Intégrés</span>
-            <span class="skill-tag">Santé Digitale (DEP / DPI)</span>
-            <span class="skill-tag">Conformité HIPAA &amp; Qualité</span>
-          </div>
-        </div>
-        <div class="skill-domain">
-          <h3>Leadership &amp; Venture</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Développement Produit (0 à 1)</span>
-            <span class="skill-tag">Gestion P&amp;L &amp; Advisory</span>
-            <span class="skill-tag">Partenariats Public-Privé</span>
-            <span class="skill-tag">Animation d’équipes</span>
-            <span class="skill-tag">Bilingue FR / EN (C2)</span>
-          </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>Exécution rapide &amp; autonomie</h3>
+          <p>Intervention ciblée avec vos équipes ou supports, restitution actionnable et prise en main directe par votre organisation.</p>
         </div>
       </div>
 
-      <div class="skills-grid i18n-en">
-        <div class="skill-domain">
-          <h3>Strategy &amp; Innovation</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Clinical Need Characterisation</span>
-            <span class="skill-tag">Strategy &amp; Governance</span>
-            <span class="skill-tag">PMO &amp; Portfolio</span>
-            <span class="skill-tag">Market Access &amp; GTM</span>
-            <span class="skill-tag">Innovation Due Diligence</span>
-          </div>
+      <div class="steps-grid i18n-en">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>20-Minute Scoping Call</h3>
+          <p>A focused Google Meet session to clarify your challenge, assess mutual fit, and choose the right format.</p>
         </div>
-        <div class="skill-domain">
-          <h3>Digitalization &amp; Optimization</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Digitalization</span>
-            <span class="skill-tag">Operational Optimization</span>
-            <span class="skill-tag">Scaled Agile (SAFe® 6.0)</span>
-            <span class="skill-tag">Lean &amp; Ishikawa (RCA)</span>
-            <span class="skill-tag">UAT &amp; Change Adoption</span>
-          </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>Scoped Proposal Within 24h</h3>
+          <p>A clear scope covering objectives, concrete deliverables, timeline, and a transparent fixed fee or hour pack.</p>
         </div>
-        <div class="skill-domain">
-          <h3>Clinical Application &amp; Health</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Clinical Application</span>
-            <span class="skill-tag">Acute &amp; Emergency Care</span>
-            <span class="skill-tag">Patient Pathways &amp; Integrated Care</span>
-            <span class="skill-tag">Digital Health (EPR / DPI)</span>
-            <span class="skill-tag">HIPAA &amp; Care Quality</span>
-          </div>
-        </div>
-        <div class="skill-domain">
-          <h3>Leadership &amp; Venture</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">0-to-1 Product Execution</span>
-            <span class="skill-tag">P&amp;L &amp; Advisory Boards</span>
-            <span class="skill-tag">Public-Private Partnerships</span>
-            <span class="skill-tag">Cross-Functional Leadership</span>
-            <span class="skill-tag">Bilingual FR / EN (C2)</span>
-          </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>Focused Execution &amp; Handover</h3>
+          <p>Hands-on work with your team or materials, delivering actionable outputs your organization can run with.</p>
         </div>
       </div>
     </section>
 
-    <section id="parcours">
-      <div class="section-header i18n-fr">
-        <h2>Parcours Professionnel</h2>
-        <p class="section-desc">
-          Une trajectoire ancrée dans l’application clinique, l’innovation entrepreneuriale et la stratégie de transformation.
-        </p>
-      </div>
-      <div class="section-header i18n-en">
-        <h2>Professional Experience</h2>
-        <p class="section-desc">
-          A career grounded in clinical application, entrepreneurial innovation, and transformation strategy.
-        </p>
-      </div>
-
-      <div class="timeline i18n-fr">
-        <div class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-date">2025 — Présent</span>
-            <span class="timeline-loc">Lausanne &amp; Suisse Romande</span>
-            <span class="timeline-badge">Advisory &amp; Conseil</span>
-          </div>
-          <div class="timeline-content">
-            <h3>Conseillère Stratégie &amp; Innovation • Jury d'Experts</h3>
-            <span class="timeline-org">Hands-on Human Health Hub (H4) &amp; MassChallenge Switzerland</span>
-            <ul>
-              <li>Membre du comité consultatif d’H4 (Lausanne) : conseil sur la caractérisation de besoin clinique, l’application terrain et l’intégration des innovations en santé.</li>
-              <li>Jurée et mentore startups pour MassChallenge Switzerland : évaluation de la pertinence clinique, de l’innovation et de l’optimisation du modèle.</li>
-              <li>Conseil indépendant en stratégie, innovation, digitalisation, optimisation et application clinique.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-date">2022 — Déc. 2023</span>
-            <span class="timeline-loc">Zurich &amp; International</span>
-            <span class="timeline-badge">Promue en 10 mois</span>
-          </div>
-          <div class="timeline-content">
-            <h3>Manager — Strategy &amp; Transformation (Life Sciences)</h3>
-            <span class="timeline-org">Capgemini Invent</span>
-            <ul>
-              <li>Promotion accélérée de Senior Consultant à Manager en 10 mois.</li>
-              <li>Conception d’architectures opérationnelles et pilotage d’une feuille de route de 70 initiatives sur 8 Maisons internationales.</li>
-              <li>Digitalisation à grande échelle (170 000+ utilisateurs, CAC 40) et stratégies market access / segmentation patients pour Roche Diabetes Care (+20 % d’efficacité opérationnelle).</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-date">2018 — 2022</span>
-            <span class="timeline-loc">Los Angeles, Californie</span>
-            <span class="timeline-badge">CEO &amp; Co-fondatrice</span>
-          </div>
-          <div class="timeline-content">
-            <h3>Co-fondatrice &amp; Chief Executive Officer (CEO)</h3>
-            <span class="timeline-org">RideSVP Inc. (Colleag)</span>
-            <ul>
-              <li>Direction générale (P&amp;L, $150k de financements non dilutifs, Advisory Board de 9 membres) et management d’une équipe pluridisciplinaire.</li>
-              <li>2 pivots stratégiques (C2C vers B2B/B2B2C), 2 500+ leads organiques, 550 clients pré-lancement (23,6 % de conversion) et partenariats LADOT / World Economic Forum.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-date">2018 — 2020</span>
-            <span class="timeline-loc">Los Angeles, Californie</span>
-            <span class="timeline-badge">Living Lab Hospitalier</span>
-          </div>
-          <div class="timeline-content">
-            <h3>Operations &amp; HealthTech Associate</h3>
-            <span class="timeline-org">Cedars-Sinai Accelerator powered by Techstars</span>
-            <ul>
-              <li>Interface entre plus de 10 startups santé et les équipes cliniques et hospitalières (&gt;$10M levés, 1 acquisition).</li>
-              <li>Application clinique et protocoles UAT d’une plateforme d’IA vocale de triage médical (97,5 % de précision clinique).</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-date">2010 — 2017 &amp; 2020</span>
-            <span class="timeline-loc">Canton de Vaud, Suisse</span>
-            <span class="timeline-badge">Soins Aigus &amp; Urgences</span>
-          </div>
-          <div class="timeline-content">
-            <h3>Infirmière Diplômée d'État (RN)</h3>
-            <span class="timeline-org">eHnv (Yverdon) • EHC (Morges) • PSVJ (Le Sentier)</span>
-            <ul>
-              <li>Pratique clinique en Urgences, Soins Intensifs, Salle de réveil (SSPI), Chirurgie et unités critiques COVID-19 (renfort 2020).</li>
-              <li>Audit ergonomique et optimisation sur un site de 500+ salariés chez Schrader SA (+10 % de productivité).</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="timeline i18n-en">
-        <div class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-date">2025 — Present</span>
-            <span class="timeline-loc">Lausanne &amp; Western Switzerland</span>
-            <span class="timeline-badge">Advisory &amp; Consulting</span>
-          </div>
-          <div class="timeline-content">
-            <h3>Strategy &amp; Innovation Advisor • Selection Jury</h3>
-            <span class="timeline-org">Hands-on Human Health Hub (H4) &amp; MassChallenge Switzerland</span>
-            <ul>
-              <li>Advisory committee member at H4 (Lausanne): advising on clinical need characterisation, clinical application, and healthcare innovation integration.</li>
-              <li>Startup selection juror and mentor at MassChallenge Switzerland: assessing clinical relevance, innovation fit, and operational optimization.</li>
-              <li>Independent consulting across strategy, innovation, digitalization, optimization, and clinical application.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-date">2022 — Dec 2023</span>
-            <span class="timeline-loc">Zurich &amp; International</span>
-            <span class="timeline-badge">Promoted in 10 mos</span>
-          </div>
-          <div class="timeline-content">
-            <h3>Manager — Strategy &amp; Transformation (Life Sciences)</h3>
-            <span class="timeline-org">Capgemini Invent</span>
-            <ul>
-              <li>Promoted from Senior Consultant to Manager within 10 months.</li>
-              <li>Designed operating models and led a 70-initiative roadmap across 8 international Maisons.</li>
-              <li>Large-scale digitalization (170,000+ users, CAC 40) and market access / patient segmentation for Roche Diabetes Care (+20% operational efficiency).</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-date">2018 — 2022</span>
-            <span class="timeline-loc">Los Angeles, CA</span>
-            <span class="timeline-badge">Co-Founder &amp; CEO</span>
-          </div>
-          <div class="timeline-content">
-            <h3>Co-Founder &amp; Chief Executive Officer (CEO)</h3>
-            <span class="timeline-org">RideSVP Inc. (Colleag)</span>
-            <ul>
-              <li>Full P&amp;L ownership, $150k non-dilutive funding, 9-member Advisory Board, and cross-functional team leadership.</li>
-              <li>Executed 2 strategic pivots (C2C to B2B/B2B2C), generating 2,500+ organic leads, 550 pre-launch customers (23.6% conversion), and LADOT / World Economic Forum partnerships.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-date">2018 — 2020</span>
-            <span class="timeline-loc">Los Angeles, CA</span>
-            <span class="timeline-badge">Hospital Living Lab</span>
-          </div>
-          <div class="timeline-content">
-            <h3>Operations &amp; HealthTech Associate</h3>
-            <span class="timeline-org">Cedars-Sinai Accelerator powered by Techstars</span>
-            <ul>
-              <li>Bridged 10+ health startups with hospital clinicians and care teams ($10M+ VC raised, 1 acquisition).</li>
-              <li>Clinical application and UAT protocols for a voice AI medical triage platform (97.5% clinical accuracy).</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-meta">
-            <span class="timeline-date">2010 — 2017 &amp; 2020</span>
-            <span class="timeline-loc">Canton of Vaud, Switzerland</span>
-            <span class="timeline-badge">Acute &amp; Emergency Care</span>
-          </div>
-          <div class="timeline-content">
-            <h3>Registered Nurse (RN)</h3>
-            <span class="timeline-org">eHnv (Yverdon) • EHC (Morges) • PSVJ (Le Sentier)</span>
-            <ul>
-              <li>Clinical practice in Emergency, Intensive Care, PACU, Surgery, and COVID-19 critical care support (2020).</li>
-              <li>Ergonomic audit and optimization across 500+ workstations at Schrader SA (+10% productivity).</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="certificats">
-      <div class="section-header i18n-fr">
-        <h2>Certificats, Formation &amp; Distinctions</h2>
-      </div>
-      <div class="section-header i18n-en">
-        <h2>Credentials, Education &amp; Awards</h2>
-      </div>
-
-      <div class="awards-grid i18n-fr">
-        <div class="award-card">
-          <span class="award-year">Formation Exécutive • En cours</span>
-          <div class="award-title">Executive Master en Stratégie &amp; Management</div>
-          <p class="award-desc"><strong>HEC Paris</strong> (Procédure VAE — RNCP 38435).</p>
-        </div>
-        <div class="award-card">
-          <span class="award-year">Excellence Académique • 2018</span>
-          <div class="award-title">UCLA Extension — Master Certification (GPA 4.0/4.0)</div>
-          <p class="award-desc">Business Administration &amp; Management avec mention d’honneur, lauréate du <strong>Laurel Hummel Award</strong>.</p>
-        </div>
-        <div class="award-card">
-          <span class="award-year">Distinctions • 2018–2020</span>
-          <div class="award-title">CES Climate Change Innovator Award</div>
-          <p class="award-desc">Lauréate CES 2020, <strong>LACI California Climate Cup</strong> et finaliste du <strong>CleanTech Open</strong>.</p>
-        </div>
-        <div class="award-card">
-          <span class="award-year">Publication • 2019</span>
-          <div class="award-title">International Journal of Medical Informatics</div>
-          <p class="award-desc">Article évalué par les pairs (Elsevier) sur l’automatisation vocale de la collecte de données médicales.</p>
-        </div>
-        <div class="award-card">
-          <span class="award-year">Certifications</span>
-          <div class="award-title">Leading SAFe® 6.0 • HIPAA • Data Science • Venture</div>
-          <p class="award-desc">Scaled Agile, conformité HIPAA (UCLA Health), Introduction to Data Science (Capgemini Invent) et Venture Deals.</p>
-        </div>
-        <div class="award-card">
-          <span class="award-year">Diplômes &amp; Licence</span>
-          <div class="award-title">BSc Soins Infirmiers (12e/440) &amp; Pilote Privé (PPL)</div>
-          <p class="award-desc">Diplôme d’État d’Infirmier (12e/440, reconnaissance CRS en cours), BLS et licence de pilote privé Cessna C150/172.</p>
-        </div>
-      </div>
-
-      <div class="awards-grid i18n-en">
-        <div class="award-card">
-          <span class="award-year">Executive Education • In Progress</span>
-          <div class="award-title">Executive Master in Strategy &amp; Management</div>
-          <p class="award-desc"><strong>HEC Paris</strong> (VAE Accreditation Track — RNCP 38435).</p>
-        </div>
-        <div class="award-card">
-          <span class="award-year">Academic Honors • 2018</span>
-          <div class="award-title">UCLA Extension — Master Certification (4.0/4.0 GPA)</div>
-          <p class="award-desc">Business Administration &amp; Management with distinction, <strong>Laurel Hummel Award</strong> recipient.</p>
-        </div>
-        <div class="award-card">
-          <span class="award-year">Awards • 2018–2020</span>
-          <div class="award-title">CES Climate Change Innovator Award</div>
-          <p class="award-desc">CES 2020 Innovator Award, <strong>LACI California Climate Cup</strong> winner, and <strong>CleanTech Open</strong> finalist.</p>
-        </div>
-        <div class="award-card">
-          <span class="award-year">Publication • 2019</span>
-          <div class="award-title">International Journal of Medical Informatics</div>
-          <p class="award-desc">Peer-reviewed publication (Elsevier) on voice-enabled automated medical data collection.</p>
-        </div>
-        <div class="award-card">
-          <span class="award-year">Certifications</span>
-          <div class="award-title">Leading SAFe® 6.0 • HIPAA • Data Science • Venture</div>
-          <p class="award-desc">Scaled Agile, HIPAA compliance (UCLA Health), Intro to Data Science (Capgemini Invent), and Venture Deals.</p>
-        </div>
-        <div class="award-card">
-          <span class="award-year">Degrees &amp; License</span>
-          <div class="award-title">BSc Nursing (12th/440) &amp; Private Pilot (PPL)</div>
-          <p class="award-desc">State Nursing Degree (12th/440, Swiss Red Cross recognition in progress), BLS, and Cessna C150/172 PPL.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-header i18n-fr">
-        <h2>Ancrage &amp; Disciplines Structurantes</h2>
-      </div>
-      <div class="section-header i18n-en">
-        <h2>Disciplines Beyond Work</h2>
-      </div>
-
-      <div class="pillars-bar i18n-fr">
-        <div class="pillar-box">
-          <h4>Aviation (PPL)</h4>
-          <p>Rigueur des check-lists, anticipation météo et gestion du risque sur Cessna C150/172 et vol montagne.</p>
-        </div>
-        <div class="pillar-box">
-          <h4>Alpinisme &amp; Ultra-Trail</h4>
-          <p>Ascensions alpines autonomes (Dent Blanche 4 357 m, Mont Blanc) et ultra-endurance (UTMJ).</p>
-        </div>
-        <div class="pillar-box">
-          <h4>Musique Classique</h4>
-          <p>13 ans de Conservatoire (violon et piano) : rigueur de répétition et précision d’exécution.</p>
-        </div>
-        <div class="pillar-box">
-          <h4>Art Oratoire</h4>
-          <p>Prise de parole bilingue (Toastmasters Lausanne) et conférences (Jiva'Elles).</p>
-        </div>
-      </div>
-
-      <div class="pillars-bar i18n-en">
-        <div class="pillar-box">
-          <h4>Aviation (PPL)</h4>
-          <p>Checklist discipline, weather risk management, and calm decision-making on Cessna C150/172 &amp; mountain flying.</p>
-        </div>
-        <div class="pillar-box">
-          <h4>Mountaineering &amp; Trail</h4>
-          <p>Autonomous alpine ascents (Dent Blanche 4,357 m, Mont Blanc) and endurance trail racing (UTMJ).</p>
-        </div>
-        <div class="pillar-box">
-          <h4>Classical Music</h4>
-          <p>13 years of Conservatory training (violin &amp; piano): deliberate practice and execution precision.</p>
-        </div>
-        <div class="pillar-box">
-          <h4>Public Speaking</h4>
-          <p>Bilingual speaking (Toastmasters Lausanne) and keynote talks (Jiva'Elles).</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" style="border-bottom: none;">
-      <div class="section-header i18n-fr">
-        <h2>Contact &amp; Enregistrement Rapide</h2>
-      </div>
-      <div class="section-header i18n-en">
-        <h2>Contact &amp; Quick Save</h2>
-      </div>
-
-      <div class="contact-wrapper">
-        <div class="contact-details">
-          <div class="contact-identity">
-            <img src="HAFIDHA-BENYAHIA-001-Marie-Elise-Studio-Photo.jpg" alt="Hafidha Benyahia" class="contact-avatar">
-            <div>
-              <div class="contact-identity-name">Hafidha Benyahia</div>
-              <div class="contact-identity-role i18n-fr">Stratégie • Innovation Santé • Digitalisation • Clinique</div>
-              <div class="contact-identity-role i18n-en">Strategy • Health Innovation • Digitalization • Clinical</div>
-            </div>
-          </div>
+    <section id="rdv" style="border-bottom: none;">
+      <div class="booking-box">
+        <div>
+          <h2 class="i18n-fr">Planifier un échange de cadrage</h2>
+          <h2 class="i18n-en">Schedule a Discovery Call</h2>
 
           <p class="i18n-fr">
-            Scannez le QR code ou cliquez sur le bouton ci-dessous pour enregistrer directement ma fiche contact (avec photo) dans votre téléphone.
+            Choisissez un créneau de 20 minutes dans mon agenda. Un lien <strong>Google Meet</strong> est généré automatiquement dès la confirmation.
           </p>
           <p class="i18n-en">
-            Scan the QR code or tap the button below to save my contact card (with photo) directly to your phone.
+            Pick a 20-minute slot on my calendar. A <strong>Google Meet</strong> link is generated automatically upon confirmation.
           </p>
 
-          <div class="direct-links i18n-fr">
-            <span><strong>Email :</strong> <a href="mailto:hafidha.ben@gmail.com">hafidha.ben@gmail.com</a></span>
-            <span><strong>Téléphone :</strong> <a href="tel:+33619268008">+33 6 19 26 80 08</a></span>
-            <span><strong>Portfolio :</strong> <a href="https://hafidha-ben.github.io" target="_blank" rel="noopener">hafidha-ben.github.io</a></span>
-            <span><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/hafidhabenyahia" target="_blank" rel="noopener">linkedin.com/in/hafidhabenyahia</a></span>
-          </div>
-
-          <div class="direct-links i18n-en">
-            <span><strong>Email:</strong> <a href="mailto:hafidha.ben@gmail.com">hafidha.ben@gmail.com</a></span>
-            <span><strong>Phone:</strong> <a href="tel:+33619268008">+33 6 19 26 80 08</a></span>
-            <span><strong>Portfolio:</strong> <a href="https://hafidha-ben.github.io" target="_blank" rel="noopener">hafidha-ben.github.io</a></span>
-            <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hafidhabenyahia" target="_blank" rel="noopener">linkedin.com/in/hafidhabenyahia</a></span>
-          </div>
-
-          <div class="download-group i18n-fr">
-            <a id="download-vcf-fr" href="#" download="Hafidha_Benyahia.vcf" class="btn-primary">Enregistrer la vCard (.vcf)</a>
-            <a href="Hafidha_Benyahia_CV.pdf" download class="btn-secondary">Télécharger le CV (PDF)</a>
-          </div>
-
-          <div class="download-group i18n-en">
-            <a id="download-vcf-en" href="#" download="Hafidha_Benyahia.vcf" class="btn-primary">Save vCard (.vcf)</a>
-            <a href="Hafidha_Benyahia_CV.pdf" download class="btn-secondary">Download CV (PDF)</a>
-          </div>
+          <a href="COLLER_TON_LIEN_GOOGLE_AGENDA_ICI" target="_blank" rel="noopener" class="btn-primary i18n-fr">
+            Choisir un créneau sur Google Agenda ↗
+          </a>
+          <a href="COLLER_TON_LIEN_GOOGLE_AGENDA_ICI" target="_blank" rel="noopener" class="btn-primary i18n-en">
+            Select a Time on Google Calendar ↗
+          </a>
         </div>
 
-        <div class="qr-box">
-          <img id="qr-vcard-img" src="" alt="QR Code vCard Hafidha Benyahia">
+        <div class="booking-meta">
+          <div>
+            <strong class="i18n-fr">Format :</strong>
+            <strong class="i18n-en">Format:</strong>
+            <span>20 min • Google Meet</span>
+          </div>
+          <div>
+            <strong class="i18n-fr">Zone d’intervention :</strong>
+            <strong class="i18n-en">Coverage:</strong>
+            <span class="i18n-fr">Suisse Romande, France &amp; Remote (FR / EN)</span>
+            <span class="i18n-en">Switzerland, France &amp; Remote (EN / FR)</span>
+          </div>
+          <div>
+            <strong>Email :</strong>
+            <a href="mailto:hafidha.ben@gmail.com">hafidha.ben@gmail.com</a>
+          </div>
+          <div>
+            <strong>LinkedIn :</strong>
+            <a href="https://www.linkedin.com/in/hafidhabenyahia" target="_blank" rel="noopener">linkedin.com/in/hafidhabenyahia</a>
+          </div>
         </div>
       </div>
     </section>
 
     <footer>
-      <p class="i18n-fr">© 2026 Hafidha Benyahia — Stratégie, Innovation, Digitalisation, Optimisation &amp; Application Clinique.</p>
-      <p class="i18n-en">© 2026 Hafidha Benyahia — Strategy, Health Innovation, Digitalization, Optimization &amp; Clinical Application.</p>
+      <p class="i18n-fr">© 2026 Hafidha Benyahia — Conseil &amp; Advisory B2B • <a href="index.html">Voir le profil Exécutif Santé</a></p>
+      <p class="i18n-en">© 2026 Hafidha Benyahia — B2B Advisory &amp; Consulting • <a href="index.html">View Health Executive Profile</a></p>
     </footer>
 
   </div>
 
   <script>
     const titles = {
-      fr: "Hafidha Benyahia — Stratégie, Innovation, Digitalisation & Application Clinique",
-      en: "Hafidha Benyahia — Strategy, Health Innovation, Digitalization & Clinical Application"
+      fr: "Hafidha Benyahia — Conseil Stratégique, Opérations & Transformation B2B",
+      en: "Hafidha Benyahia — Strategic Advisory, Operations & B2B Transformation"
     };
 
-    const baseVcardLines = {
-      fr: [
-        "BEGIN:VCARD",
-        "VERSION:3.0",
-        "N:Benyahia;Hafidha;;;",
-        "FN:Hafidha Benyahia",
-        "TITLE:Stratégie, Innovation Santé, Digitalisation, Optimisation & Application Clinique",
-        "TEL;TYPE=CELL,VOICE:+33619268008",
-        "EMAIL;TYPE=PREF,INTERNET:hafidha.ben@gmail.com",
-        "URL;TYPE=Portfolio:https://hafidha-ben.github.io",
-        "URL;TYPE=LinkedIn:https://www.linkedin.com/in/hafidhabenyahia"
-      ],
-      en: [
-        "BEGIN:VCARD",
-        "VERSION:3.0",
-        "N:Benyahia;Hafidha;;;",
-        "FN:Hafidha Benyahia",
-        "TITLE:Strategy, Health Innovation, Digitalization, Optimization & Clinical Application",
-        "TEL;TYPE=CELL,VOICE:+33619268008",
-        "EMAIL;TYPE=PREF,INTERNET:hafidha.ben@gmail.com",
-        "URL;TYPE=Portfolio:https://hafidha-ben.github.io",
-        "URL;TYPE=LinkedIn:https://www.linkedin.com/in/hafidhabenyahia"
-      ]
-    };
-
-    let currentLang = "fr";
-    let embeddedPhotoBase64 = "";
-
-    function buildVcardString(lang, includePhoto) {
-      const lines = [...(baseVcardLines[lang] || baseVcardLines.fr)];
-      if (includePhoto && embeddedPhotoBase64) {
-        lines.push("PHOTO;ENCODING=b;TYPE=JPEG:" + embeddedPhotoBase64);
-      }
-      lines.push("END:VCARD");
-      return lines.join("\n");
-    }
-
-    function updateContactAssets(lang) {
-      const qrCardData = buildVcardString(lang, false);
-      document.getElementById("qr-vcard-img").src =
-        "https://api.qrserver.com/v1/create-qr-code/?size=220x220&margin=6&color=18181B&bgcolor=FFFFFF&data=" +
-        encodeURIComponent(qrCardData);
-
-      const fileCardData = buildVcardString(lang, true);
-      const blob = new Blob([fileCardData], { type: "text/vcard;charset=utf-8;" });
-      const url = URL.createObjectURL(blob);
-      document.getElementById("download-vcf-fr").href = url;
-      document.getElementById("download-vcf-en").href = url;
-    }
-
-    function encodePortraitForVcard() {
-      const img = document.getElementById("hero-portrait");
-      if (!img) return;
-
-      const processImage = () => {
-        try {
-          const size = 240;
-          const canvas = document.createElement("canvas");
-          canvas.width = size;
-          canvas.height = size;
-          const ctx = canvas.getContext("2d");
-
-          const minSide = Math.min(img.naturalWidth, img.naturalHeight);
-          const sx = (img.naturalWidth - minSide) / 2;
-          const sy = Math.max(0, (img.naturalHeight - minSide) * 0.18);
-
-          ctx.drawImage(img, sx, sy, minSide, minSide, 0, 0, size, size);
-          const dataUrl = canvas.toDataURL("image/jpeg", 0.82);
-          embeddedPhotoBase64 = dataUrl.split(",")[1] || "";
-          updateContactAssets(currentLang);
-        } catch (e) {}
-      };
-
-      if (img.complete && img.naturalWidth > 0) {
-        processImage();
-      } else {
-        img.addEventListener("load", processImage);
+    function syncNavOffset() {
+      const nav = document.getElementById("main-nav");
+      if (nav) {
+        document.documentElement.style.setProperty("--nav-height", nav.offsetHeight + "px");
       }
     }
 
     function setLanguage(lang) {
-      currentLang = lang === "en" ? "en" : "fr";
-      document.documentElement.lang = currentLang;
+      const activeLang = lang === "en" ? "en" : "fr";
+      document.documentElement.lang = activeLang;
       document.body.classList.remove("lang-fr", "lang-en");
-      document.body.classList.add("lang-" + currentLang);
-      document.title = titles[currentLang];
+      document.body.classList.add("lang-" + activeLang);
+      document.title = titles[activeLang];
 
-      document.getElementById("tab-fr").classList.toggle("active", currentLang === "fr");
-      document.getElementById("tab-en").classList.toggle("active", currentLang === "en");
-      document.getElementById("tab-fr").setAttribute("aria-selected", currentLang === "fr");
-      document.getElementById("tab-en").setAttribute("aria-selected", currentLang === "en");
+      document.getElementById("tab-fr").classList.toggle("active", activeLang === "fr");
+      document.getElementById("tab-en").classList.toggle("active", activeLang === "en");
+      document.getElementById("tab-fr").setAttribute("aria-pressed", activeLang === "fr");
+      document.getElementById("tab-en").setAttribute("aria-pressed", activeLang === "en");
 
-      updateContactAssets(currentLang);
       closeMobileMenu();
+      syncNavOffset();
     }
 
     function toggleMobileMenu(e) {
       if (e) e.stopPropagation();
+      syncNavOffset();
       const panel = document.getElementById("nav-menu-panel");
       const btn = document.getElementById("menu-toggle");
       if (!panel || !btn) return;
@@ -1670,8 +1054,8 @@
       }
     });
 
-    updateContactAssets("fr");
-    encodePortraitForVcard();
+    window.addEventListener("resize", syncNavOffset);
+    syncNavOffset();
   </script>
 
 </body>
