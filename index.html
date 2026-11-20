@@ -45,7 +45,7 @@
       z-index: 100;
       background: rgba(250, 249, 246, 0.97);
       border-bottom: 1px solid var(--border);
-      padding: 0.85rem 1.25rem;
+      padding: 0.8rem 1.15rem;
     }
 
     .nav-inner {
@@ -54,12 +54,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.65rem;
     }
 
     .nav-logo {
       font-family: var(--font-serif);
-      font-size: clamp(1.15rem, 4vw, 1.4rem);
+      font-size: clamp(1.1rem, 3.8vw, 1.4rem);
       font-weight: 700;
       color: var(--text);
       text-decoration: none;
@@ -68,7 +68,7 @@
 
     .nav-right {
       display: flex;
-      gap: 0.65rem;
+      gap: 0.55rem;
       align-items: center;
       flex-shrink: 0;
     }
@@ -95,12 +95,39 @@
     .nav-links a:hover { color: var(--accent); }
 
     .nav-switch {
-      border: 1px solid var(--border);
-      background: var(--surface);
+      border: 1px solid var(--accent-warm);
+      background: rgba(154, 91, 62, 0.08);
       padding: 0.36rem 0.68rem;
       border-radius: 6px;
-      color: var(--text) !important;
+      color: var(--accent-warm) !important;
       font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .nav-switch:hover {
+      background: var(--accent-warm);
+      color: #FFFFFF !important;
+    }
+
+    /* Bouton Conseil B2B séparé du menu : visible uniquement sur mobile */
+    .mobile-b2b-btn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--accent-warm);
+      background: rgba(154, 91, 62, 0.1);
+      color: var(--accent-warm);
+      font-family: var(--font-sans);
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 0.36rem 0.62rem;
+      border-radius: 7px;
+      text-decoration: none;
+      white-space: nowrap;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .nav-cta {
@@ -119,11 +146,12 @@
       border: 1px solid var(--border);
       color: var(--text);
       font-family: var(--font-sans);
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 600;
-      padding: 0.38rem 0.68rem;
+      padding: 0.36rem 0.62rem;
       border-radius: 7px;
       cursor: pointer;
+      white-space: nowrap;
       touch-action: manipulation;
       -webkit-tap-highlight-color: transparent;
       position: relative;
@@ -135,8 +163,8 @@
       background: var(--surface-alt);
       border: 1px solid var(--border);
       border-radius: 7px;
-      padding: 0.2rem;
-      gap: 0.2rem;
+      padding: 0.18rem;
+      gap: 0.15rem;
     }
 
     .lang-tab {
@@ -144,10 +172,10 @@
       background: transparent;
       color: var(--text-muted);
       font-family: var(--font-sans);
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 700;
       letter-spacing: 0.04em;
-      padding: 0.32rem 0.6rem;
+      padding: 0.3rem 0.55rem;
       border-radius: 5px;
       cursor: pointer;
       touch-action: manipulation;
@@ -160,7 +188,11 @@
     }
 
     @media (max-width: 900px) {
+      .mobile-b2b-btn { display: inline-flex; }
       .menu-toggle { display: inline-flex; }
+
+      /* Masque le doublon Conseil B2B à l'intérieur du tiroir mobile */
+      .nav-menu-panel .nav-switch { display: none; }
 
       .nav-menu-panel {
         display: none;
@@ -663,6 +695,9 @@
       <a href="index.html" class="nav-logo">Hafidha Benyahia</a>
 
       <div class="nav-right">
+        <a href="conseil.html" class="mobile-b2b-btn i18n-fr">Conseil B2B ↗</a>
+        <a href="conseil.html" class="mobile-b2b-btn i18n-en">B2B Advisory ↗</a>
+
         <div id="nav-menu-panel" class="nav-menu-panel">
           <div class="nav-links i18n-fr">
             <a href="#vision-clinique">Vision &amp; Impact</a>
