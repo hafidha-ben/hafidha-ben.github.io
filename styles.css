@@ -169,22 +169,26 @@ h1 {
 .cta {
   display: flex;
   gap: .9rem;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
 }
 
 .btn {
+  -webkit-appearance: none;
+  appearance: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  height: 2.85rem;
   background: var(--ink);
   color: var(--paper);
   border: 1px solid var(--ink);
-  padding: .75rem 1.4rem;
+  padding: 0 1.4rem;
   text-decoration: none;
-  font: 500 .98rem/1.2 var(--sans);
+  font: 500 .95rem/1 var(--sans);
   border-radius: 2px;
   cursor: pointer;
+  white-space: nowrap;
   transition: background-color .15s ease, color .15s ease, border-color .15s ease;
 }
 
@@ -383,19 +387,23 @@ dd.result {
 
 #contact .wrap {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 1.05fr 1fr;
   gap: 3rem;
   align-items: center;
 }
 
 .contact-actions {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 2.85rem;
   gap: .85rem;
+  align-items: stretch;
 }
 
 .contact-actions .btn {
   width: 100%;
+  height: 100%;
+  padding: 0 1rem;
   justify-content: center;
   text-align: center;
 }
