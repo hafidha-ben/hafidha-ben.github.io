@@ -134,11 +134,11 @@ nav .lang {
   padding: 5rem 0 3.5rem;
   background-color: #0F1F33;
   background-image:
-    linear-gradient(90deg, #0F1F33 0%, #0F1F33 42%, rgba(15, 31, 51, 0.78) 58%, rgba(15, 31, 51, 0.18) 78%, rgba(15, 31, 51, 0.08) 92%, #0F1F33 100%),
-    linear-gradient(180deg, #0F1F33 0%, rgba(15, 31, 51, 0.22) 16%, rgba(15, 31, 51, 0.0) 48%, rgba(15, 31, 51, 0.55) 82%, #0F1F33 100%),
+    linear-gradient(90deg, #0F1F33 0%, #0F1F33 44%, rgba(15, 31, 51, 0.82) 60%, rgba(15, 31, 51, 0.28) 80%, rgba(15, 31, 51, 0.08) 100%),
+    linear-gradient(180deg, #0F1F33 0%, rgba(15, 31, 51, 0.20) 14%, rgba(15, 31, 51, 0.0) 48%, rgba(15, 31, 51, 0.55) 84%, #0F1F33 100%),
     url("Photo%20portrait%20Hafidha%20Benyahia.jpg");
   background-size: 100% 100%, 100% 100%, auto 100%;
-  background-position: 0 0, 0 0, 86% 12%;
+  background-position: 0 0, 0 0, 100% 10%;
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-attachment: scroll, scroll, scroll;
   color: #F6F7F5;
@@ -146,8 +146,8 @@ nav .lang {
 
 .hero-cover.en-bg {
   background-image:
-    linear-gradient(90deg, #0F1F33 0%, #0F1F33 42%, rgba(15, 31, 51, 0.78) 58%, rgba(15, 31, 51, 0.18) 78%, rgba(15, 31, 51, 0.08) 92%, #0F1F33 100%),
-    linear-gradient(180deg, #0F1F33 0%, rgba(15, 31, 51, 0.22) 16%, rgba(15, 31, 51, 0.0) 48%, rgba(15, 31, 51, 0.55) 82%, #0F1F33 100%),
+    linear-gradient(90deg, #0F1F33 0%, #0F1F33 44%, rgba(15, 31, 51, 0.82) 60%, rgba(15, 31, 51, 0.28) 80%, rgba(15, 31, 51, 0.08) 100%),
+    linear-gradient(180deg, #0F1F33 0%, rgba(15, 31, 51, 0.20) 14%, rgba(15, 31, 51, 0.0) 48%, rgba(15, 31, 51, 0.55) 84%, #0F1F33 100%),
     url("../Photo%20portrait%20Hafidha%20Benyahia.jpg");
 }
 
