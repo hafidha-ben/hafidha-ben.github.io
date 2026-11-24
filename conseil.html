@@ -37,11 +37,11 @@
 </div>
 <p class="lead">J’accompagne dirigeants, fondateurs et équipes de direction sur leurs enjeux de développement et de transformation : accès au marché, modèles opérationnels, optimisation de processus, préparation à la due diligence pour une levée de fonds et leviers digitaux ou IA au service de l’exécution.</p>
 <p class="sub">Tous secteurs, avec une expertise reconnue en santé et Life Sciences. Ancrage suisse et interventions à l’international.</p>
-<div class="cta"><a class="btn" href="https://calendar.app.google/f3LcfBA3sCh7hRLeA" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a><a class="btn btn-secondary" href="index.html#realisations">Voir les réalisations</a></div>
+<div class="cta"><a class="btn" href="https://calendar.app.google/f3LcfBA3sCh7hRLeA" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a><button type="button" class="btn btn-secondary" onclick="openFramingModal('À définir')">Cadrer un besoin</button></div>
 </div>
 <div class="advisory-right">
 <aside class="advisory-note"><strong>Cadre d’intervention</strong>Missions en présentiel ou à distance. Dialogue direct avec les décideurs, alliant recul stratégique et traduction concrète entre stratégie, métiers, organisation et technologie.</aside>
-<div class="hero-deliverables" aria-label="Exemples de livrables avec graphiques">
+<div class="hero-deliverables" id="hero-deliverables-3d" aria-label="Exemples de livrables avec graphiques">
   <div class="hero-deliv-label">Exemples de livrables · Schémas illustratifs</div>
 
   <article class="deliv-card">
@@ -172,14 +172,95 @@
 
 <section id="preuves"><div class="wrap">
 <h2>Références</h2>
-<p class="intro">Trois expériences qui nourrissent ces formats.</p>
-<div class="proof-grid"><div class="proof-card"><h3>Accès au marché</h3><p>Étude de faisabilité sur 5 marchés européens, huit dimensions d’analyse, objectif de 20 % de gains opérationnels.</p></div><div class="proof-card"><h3>Feuille de route technologique</h3><p>70 initiatives structurées en 20 programmes pour 8 Maisons d’un groupe du luxe.</p></div><div class="proof-card"><h3>Création et financement</h3><p>Cofondatrice et CEO : 150 000 $ de financements non dilutifs, 550 clients avant le lancement. Formation Venture Deals (Techstars × Kauffman Fellows).</p></div></div>
+<p class="intro">Cliquez sur une référence pour afficher le détail du contexte et de l’impact.</p>
+<div class="proof-grid" id="references-list">
+  <button type="button" class="proof-card is-interactive" aria-expanded="false" onclick="toggleProofCard(this)">
+    <div class="card-top"><h3>Accès au marché</h3><span class="card-toggle" aria-hidden="true">+</span></div>
+    <p>Étude de faisabilité sur 5 marchés européens, huit dimensions d’analyse, objectif de 20 % de gains opérationnels.</p>
+    <div class="card-detail" hidden>
+      <p>Périmètre : Suisse, France, Allemagne, Autriche et Royaume-Uni, couvrant cadre réglementaire, modèle commercial, parcours patient et capacités opérationnelles.</p>
+      <span class="card-action-link" onclick="event.stopPropagation(); openFramingModal('Cadrage croissance & transformation');">Cadrer un projet similaire →</span>
+    </div>
+  </button>
+
+  <button type="button" class="proof-card is-interactive" aria-expanded="false" onclick="toggleProofCard(this)">
+    <div class="card-top"><h3>Feuille de route technologique</h3><span class="card-toggle" aria-hidden="true">+</span></div>
+    <p>70 initiatives structurées en 20 programmes pour 8 Maisons d’un groupe du luxe.</p>
+    <div class="card-detail" hidden>
+      <p>Gouvernance de portefeuille, services partagés et priorisation sur un horizon de 3 à 5 ans afin d’aligner les métiers et les systèmes d’information.</p>
+      <span class="card-action-link" onclick="event.stopPropagation(); openFramingModal('Cadrage croissance & transformation');">Cadrer un projet similaire →</span>
+    </div>
+  </button>
+
+  <button type="button" class="proof-card is-interactive" aria-expanded="false" onclick="toggleProofCard(this)">
+    <div class="card-top"><h3>Création et financement</h3><span class="card-toggle" aria-hidden="true">+</span></div>
+    <p>Cofondatrice et CEO : 150 000 $ de financements non dilutifs, 550 clients avant le lancement. Formation Venture Deals (Techstars × Kauffman Fellows).</p>
+    <div class="card-detail" hidden>
+      <p>Structuration de la thèse, pivots stratégiques (C2C vers B2B et B2B2C), préparation du dossier de financement et exécution commerciale pré-lancement.</p>
+      <span class="card-action-link" onclick="event.stopPropagation(); openFramingModal('Diagnostic stratégique');">Préparer un dossier de levée →</span>
+    </div>
+  </button>
+</div>
 </div></section>
 
 <section id="formats"><div class="wrap">
 <h2>Formats d’intervention</h2>
-<p class="intro">Trois formats selon votre point de départ et le niveau d’engagement souhaité.</p>
-<div class="offers-grid"><article class="offer-card"><div><div class="offer-tag">Format 01</div><h3>Diagnostic stratégique</h3><p>Un éclairage objectif sur un choix stratégique, un processus qui s’essouffle ou un dossier de levée de fonds à fiabiliser.</p><ul class="offer-list"><li>Analyse de la situation, des options et des risques</li><li>Audit de dossier et préparation à la due diligence pour une levée de fonds</li><li>Note de synthèse et recommandations actionnables</li></ul></div><div class="offer-meta">Format court · Décision rapide</div></article><article class="offer-card featured"><div><div class="offer-tag">Format 02</div><h3>Cadrage croissance &amp; transformation</h3><p>Structuration d’une stratégie d’accès au marché, d’une feuille de route ou d’un modèle opérationnel cible.</p><ul class="offer-list"><li>Étude de faisabilité et d’accès au marché (juridique, commercial, financier, parcours client)</li><li>Modèle opérationnel cible et priorisation des initiatives</li><li>Plan de déploiement, adoption et indicateurs de suivi</li></ul></div><div class="offer-meta">Mandat dédié · Feuille de route et livrables</div></article><article class="offer-card"><div><div class="offer-tag">Format 03</div><h3>Strategic Advisory</h3><p>Une interlocutrice régulière pour dirigeants, fondateurs ou comités, afin de garder décisions et exécution alignées.</p><ul class="offer-list"><li>Revue régulière des priorités, des modèles opérationnels et des arbitrages</li><li>Regard critique sur plans, offres ou partenariats, y compris liés à l’IA</li><li>Participation à un comité consultatif ou à un jury de sélection</li></ul></div><div class="offer-meta">Cadence mensuelle ou ponctuelle</div></article></div>
+<p class="intro">Cliquez sur un format pour consulter son périmètre et le sélectionner dans le formulaire de cadrage.</p>
+<div class="offers-grid">
+  <article class="offer-card is-clickable" tabindex="0" role="button" aria-expanded="false" data-format="Diagnostic stratégique" onclick="handleOfferClick(this)" onkeydown="handleOfferKey(event, this)">
+    <div>
+      <div class="offer-tag">Format 01</div>
+      <div class="card-top"><h3>Diagnostic stratégique</h3><span class="card-toggle" aria-hidden="true">+</span></div>
+      <p>Un éclairage objectif sur un choix stratégique, un processus qui s’essouffle ou un dossier de levée de fonds à fiabiliser.</p>
+      <ul class="offer-list">
+        <li>Analyse de la situation, des options et des risques</li>
+        <li>Audit de dossier et préparation à la due diligence pour une levée de fonds</li>
+        <li>Note de synthèse et recommandations actionnables</li>
+      </ul>
+      <div class="card-detail" hidden>
+        <p>Idéal pour trancher un arbitrage rapide, auditer un flux critique ou fiabiliser une data room / narration investisseurs avant un comité ou une levée.</p>
+        <span class="card-action-link" onclick="event.stopPropagation(); openFramingModal('Diagnostic stratégique');">Sélectionner ce format →</span>
+      </div>
+    </div>
+    <div class="offer-meta">Format court · Décision rapide</div>
+  </article>
+
+  <article class="offer-card featured is-clickable" tabindex="0" role="button" aria-expanded="false" data-format="Cadrage croissance & transformation" onclick="handleOfferClick(this)" onkeydown="handleOfferKey(event, this)">
+    <div>
+      <div class="offer-tag">Format 02</div>
+      <div class="card-top"><h3>Cadrage croissance &amp; transformation</h3><span class="card-toggle" aria-hidden="true">+</span></div>
+      <p>Structuration d’une stratégie d’accès au marché, d’une feuille de route ou d’un modèle opérationnel cible.</p>
+      <ul class="offer-list">
+        <li>Étude de faisabilité et d’accès au marché (juridique, commercial, financier, parcours client)</li>
+        <li>Modèle opérationnel cible et priorisation des initiatives</li>
+        <li>Plan de déploiement, adoption et indicateurs de suivi</li>
+      </ul>
+      <div class="card-detail" hidden>
+        <p>Conçu pour structurer une expansion marché, refondre un modèle opérationnel (TOM, RACI, processus) et livrer une feuille de route opérationnelle.</p>
+        <span class="card-action-link" onclick="event.stopPropagation(); openFramingModal('Cadrage croissance & transformation');">Sélectionner ce format →</span>
+      </div>
+    </div>
+    <div class="offer-meta">Mandat dédié · Feuille de route et livrables</div>
+  </article>
+
+  <article class="offer-card is-clickable" tabindex="0" role="button" aria-expanded="false" data-format="Strategic Advisory" onclick="handleOfferClick(this)" onkeydown="handleOfferKey(event, this)">
+    <div>
+      <div class="offer-tag">Format 03</div>
+      <div class="card-top"><h3>Strategic Advisory</h3><span class="card-toggle" aria-hidden="true">+</span></div>
+      <p>Une interlocutrice régulière pour dirigeants, fondateurs ou comités, afin de garder décisions et exécution alignées.</p>
+      <ul class="offer-list">
+        <li>Revue régulière des priorités, des modèles opérationnels et des arbitrages</li>
+        <li>Regard critique sur plans, offres ou partenariats, y compris liés à l’IA</li>
+        <li>Participation à un comité consultatif ou à un jury de sélection</li>
+      </ul>
+      <div class="card-detail" hidden>
+        <p>Accompagnement continu auprès de la direction ou d’un comité pour challenger les arbitrages stratégiques, l’exécution et la gouvernance.</p>
+        <span class="card-action-link" onclick="event.stopPropagation(); openFramingModal('Strategic Advisory');">Sélectionner ce format →</span>
+      </div>
+    </div>
+    <div class="offer-meta">Cadence mensuelle ou ponctuelle</div>
+  </article>
+</div>
 </div></section>
 
 <section id="approche"><div class="wrap">
@@ -194,20 +275,182 @@
 </div></section>
 
 <section id="contact"><div class="wrap">
-<div><h2>Contact</h2><p class="intro" style="margin-bottom:0">Un choix stratégique à clarifier, une transformation à cadrer, un dossier de levée de fonds à fiabiliser ? Réservez un créneau ou écrivez-moi en quelques lignes avec le contexte et l’échéance.</p></div>
+<div><h2>Contact</h2><p class="intro" style="margin-bottom:0">Un choix stratégique à clarifier, une transformation à cadrer, un dossier de levée de fonds à fiabiliser ? Démarrez par le formulaire de cadrage, réservez un créneau ou écrivez-moi directement.</p></div>
 <div class="contact-actions">
 <a class="btn" href="https://calendar.app.google/f3LcfBA3sCh7hRLeA" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a>
+<button type="button" class="btn btn-secondary" onclick="openFramingModal('À définir')">Formulaire de cadrage</button>
 <button type="button" class="btn btn-secondary" data-m-u="aGFmaWRoYS5iZW4=" data-m-d="Z21haWwuY29t" onclick="openMailAction(this)">Contacter par e-mail</button>
 <a class="btn btn-secondary" href="https://www.linkedin.com/in/hafidhabenyahia" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-<a class="btn btn-secondary" href="Hafidha_Benyahia_CV_FR.pdf">CV (PDF)</a>
 </div></div></section>
 </main>
 <footer><div class="wrap"><span>© 2026 Hafidha Benyahia · Édité par l’autrice</span><a href="index.html#realisations">Réalisations</a></div></footer>
+
+<!-- Formulaire de cadrage B2B (sans exposition de numéro personnel) -->
+<div class="modal-backdrop" id="framing-modal" hidden>
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="framing-title">
+    <div class="modal-head">
+      <h2 id="framing-title">Démarrer le cadrage B2B</h2>
+      <button type="button" class="modal-close" aria-label="Fermer la fenêtre" onclick="closeFramingModal()">×</button>
+    </div>
+    <p class="modal-sub">Renseignez ces repères clés pour préparer l’échange — vous pouvez envoyer la demande directement par e-mail ou ouvrir un lien Google Form dédié une fois configuré.</p>
+    <form id="b2b-framing-form" onsubmit="submitFramingForm(event)">
+      <div class="field">
+        <label for="f-format">Format envisagé</label>
+        <select id="f-format" name="format">
+          <option value="À définir">À définir ensemble</option>
+          <option value="Diagnostic stratégique">Format 01 · Diagnostic stratégique</option>
+          <option value="Cadrage croissance & transformation">Format 02 · Cadrage croissance &amp; transformation</option>
+          <option value="Strategic Advisory">Format 03 · Strategic Advisory</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-sector">Contexte &amp; secteur</label>
+        <input id="f-sector" name="sector" type="text" placeholder="Ex. MedTech / Santé digitale / Industrie — Suisse ou international" required>
+      </div>
+      <div class="field">
+        <label for="f-challenge">Enjeu principal &amp; échéance</label>
+        <textarea id="f-challenge" name="challenge" rows="3" placeholder="Ex. Accès au marché, modèle opérationnel, préparation due diligence levée de fonds, échéance souhaitée…" required></textarea>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="f-name">Nom &amp; organisation</label>
+          <input id="f-name" name="name" type="text" placeholder="Prénom Nom · Organisation" required>
+        </div>
+        <div class="field">
+          <label for="f-email">E-mail professionnel</label>
+          <input id="f-email" name="email" type="email" placeholder="nom@organisation.com" required>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button type="submit" class="btn">Préparer l’envoi par e-mail</button>
+        <a class="btn btn-secondary" href="https://calendar.app.google/f3LcfBA3sCh7hRLeA" target="_blank" rel="noopener noreferrer">Réserver 20 min</a>
+      </div>
+      <p class="modal-hint" id="framing-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+
 <script>
 function openMailAction(el){
   var addr=atob(el.getAttribute('data-m-u'))+'@'+atob(el.getAttribute('data-m-d'));
   window.location.href='mailto:'+addr;
 }
+
+function toggleProofCard(card){
+  var expanded = card.getAttribute('aria-expanded') === 'true';
+  card.setAttribute('aria-expanded', String(!expanded));
+  card.classList.toggle('is-open', !expanded);
+  var detail = card.querySelector('.card-detail');
+  if(detail) detail.hidden = expanded;
+  var icon = card.querySelector('.card-toggle');
+  if(icon) icon.textContent = expanded ? '+' : '−';
+}
+
+function handleOfferClick(card){
+  var expanded = card.getAttribute('aria-expanded') === 'true';
+  card.setAttribute('aria-expanded', String(!expanded));
+  card.classList.toggle('is-open', !expanded);
+  var detail = card.querySelector('.card-detail');
+  if(detail) detail.hidden = expanded;
+  var icon = card.querySelector('.card-toggle');
+  if(icon) icon.textContent = expanded ? '+' : '−';
+}
+
+function handleOfferKey(e, card){
+  if(e.key === 'Enter' || e.key === ' '){
+    e.preventDefault();
+    handleOfferClick(card);
+  }
+}
+
+function openFramingModal(presetFormat){
+  var modal = document.getElementById('framing-modal');
+  var select = document.getElementById('f-format');
+  if(select && presetFormat){
+    var matched = false;
+    for(var i = 0; i < select.options.length; i++){
+      if(select.options[i].value === presetFormat){
+        select.selectedIndex = i;
+        matched = true;
+        break;
+      }
+    }
+    if(!matched) select.selectedIndex = 0;
+  }
+  if(modal){
+    modal.hidden = false;
+    var firstInput = document.getElementById('f-sector');
+    if(firstInput) firstInput.focus();
+  }
+}
+
+function closeFramingModal(){
+  var modal = document.getElementById('framing-modal');
+  if(modal) modal.hidden = true;
+}
+
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape') closeFramingModal();
+});
+
+document.addEventListener('click', function(e){
+  var modal = document.getElementById('framing-modal');
+  if(modal && !modal.hidden && e.target === modal) closeFramingModal();
+});
+
+function submitFramingForm(e){
+  e.preventDefault();
+  var fmt = document.getElementById('f-format').value;
+  var sec = document.getElementById('f-sector').value.trim();
+  var chal = document.getElementById('f-challenge').value.trim();
+  var nm = document.getElementById('f-name').value.trim();
+  var em = document.getElementById('f-email').value.trim();
+  var addr = atob('aGFmaWRoYS5iZW4=') + '@' + atob('Z21haWwuY29t');
+  var subject = encodeURIComponent('Cadrage B2B — ' + fmt + ' (' + nm + ')');
+  var body = encodeURIComponent(
+    'Format envisagé : ' + fmt + '
+' +
+    'Contexte & secteur : ' + sec + '
+' +
+    'Enjeu & échéance : ' + chal + '
+' +
+    'Contact : ' + nm + ' (' + em + ')'
+  );
+  var status = document.getElementById('framing-status');
+  if(status){
+    status.textContent = 'Ouverture de votre messagerie avec le résumé structuré…';
+  }
+  window.location.href = 'mailto:' + addr + '?subject=' + subject + '&body=' + body;
+}
+
+/* Desktop-only (> 820px) subtle 3D scroll depth on hero deliverables */
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var box = document.getElementById('hero-deliverables-3d');
+  if(!box || reduced) return;
+  var ticking = false;
+  function update3D(){
+    ticking = false;
+    if(window.innerWidth <= 820){
+      box.style.transform = '';
+      return;
+    }
+    var y = Math.min(window.scrollY, 360);
+    var ratio = y / 360;
+    var rx = (4.5 - ratio * 7.5).toFixed(2);
+    var ry = (-5 + ratio * 5).toFixed(2);
+    var ty = (-ratio * 10).toFixed(1);
+    box.style.transform = 'perspective(1100px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) translateY(' + ty + 'px)';
+  }
+  window.addEventListener('scroll', function(){
+    if(!ticking){
+      ticking = true;
+      window.requestAnimationFrame(update3D);
+    }
+  }, {passive: true});
+  window.addEventListener('resize', update3D, {passive: true});
+  update3D();
+})();
 </script>
 </body>
 </html>

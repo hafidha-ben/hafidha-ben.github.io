@@ -786,3 +786,224 @@ footer .wrap {
   nav { gap: .7rem; font-size: .86rem; }
   .deliv-chart svg text { font-size: 8.6px; }
 }
+
+/* Interactive clickable reference & offer cards + B2B framing modal + desktop 3D scroll */
+.card-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .75rem;
+}
+
+.card-toggle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.proof-card.is-interactive {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition: border-color .15s ease, background-color .15s ease;
+}
+
+.proof-card.is-interactive:hover {
+  border-top-color: var(--accent);
+}
+
+.offer-card.is-clickable {
+  cursor: pointer;
+  background: #FCFDFB;
+  border-left: 1px solid var(--rule);
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 1.25rem 1.2rem 1.1rem;
+  border-radius: 2px;
+  transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+
+.offer-card.is-clickable:hover {
+  border-top-color: var(--accent);
+  box-shadow: 0 10px 22px -14px rgba(15, 31, 51, .22);
+}
+
+.card-detail {
+  margin-top: .85rem;
+  padding-top: .75rem;
+  border-top: 1px dashed var(--rule);
+  font-size: .92rem;
+  color: var(--ink);
+}
+
+.card-detail p {
+  margin: 0 0 .55rem;
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+.card-action-link {
+  display: inline-block;
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.card-action-link:hover {
+  color: var(--ink);
+}
+
+/* Desktop 3D perspective on hero deliverables, disabled on mobile */
+@media (min-width: 821px) {
+  .hero-deliverables {
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform .12s ease-out;
+  }
+}
+
+@media (max-width: 820px) {
+  .hero-deliverables {
+    transform: none !important;
+  }
+}
+
+/* Modal for B2B framing form */
+.modal-backdrop[hidden] {
+  display: none;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background: rgba(15, 31, 51, .48);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.modal-dialog {
+  width: 100%;
+  max-width: 34rem;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--accent);
+  border-radius: 2px;
+  padding: 1.5rem;
+  box-shadow: 0 24px 48px -16px rgba(15, 31, 51, .35);
+}
+
+.modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: .4rem;
+}
+
+.modal-head h2 {
+  margin: 0;
+  font-size: 1.55rem;
+}
+
+.modal-close {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: 1px solid var(--rule);
+  color: var(--ink);
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.2rem;
+  line-height: 1;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  border-color: var(--ink);
+  background: #FCFDFB;
+}
+
+.modal-sub {
+  margin: 0 0 1.15rem;
+  font-size: .92rem;
+  color: var(--muted);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  margin-bottom: .9rem;
+}
+
+.field label {
+  font-size: .86rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  font: 400 .95rem/1.4 var(--sans);
+  color: var(--ink);
+  background: #FCFDFB;
+  border: 1px solid #B7C1BC;
+  border-radius: 2px;
+  padding: .55rem .7rem;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-color: var(--accent);
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .8rem;
+}
+
+@media (max-width: 560px) {
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: .5rem;
+}
+
+.modal-hint {
+  margin: .75rem 0 0;
+  font-size: .85rem;
+  color: var(--accent);
+  min-height: 1.2em;
+}
