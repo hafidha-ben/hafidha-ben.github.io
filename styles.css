@@ -177,24 +177,15 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: .55rem;
   background: var(--ink);
   color: var(--paper);
   border: 1px solid var(--ink);
-  padding: .75rem 1.35rem;
+  padding: .75rem 1.4rem;
   text-decoration: none;
-  font: 500 .95rem/1.2 var(--sans);
-  letter-spacing: .01em;
+  font: 500 .98rem/1.2 var(--sans);
   border-radius: 2px;
   cursor: pointer;
   transition: background-color .15s ease, color .15s ease, border-color .15s ease;
-}
-
-.btn .ico {
-  width: 1.05rem;
-  height: 1.05rem;
-  flex-shrink: 0;
-  opacity: .88;
 }
 
 .btn:hover {
@@ -203,14 +194,10 @@ h1 {
   color: #fff;
 }
 
-.btn:hover .ico {
-  opacity: 1;
-}
-
 .btn-secondary {
-  background: #FCFDFB;
+  background: transparent;
   color: var(--ink);
-  border: 1px solid #B7C1BC;
+  border: 1px solid var(--ink);
 }
 
 .btn-secondary:hover {
@@ -402,16 +389,15 @@ dd.result {
 }
 
 .contact-actions {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: .7rem;
-  max-width: 18rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .85rem;
 }
 
 .contact-actions .btn {
-  justify-content: flex-start;
-  padding: .75rem 1.2rem;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
 }
 
 footer {
@@ -438,7 +424,7 @@ footer .wrap {
   html { scroll-behavior: auto; }
 }
 
-/* Mobile: place photo right after the title block, then lead/sub/cta, then facts */
+/* Mobile: photo right after the title block */
 @media (max-width: 820px) {
   .hero { padding: 3rem 0 2.5rem; }
   .hero .wrap {
@@ -489,7 +475,6 @@ footer .wrap {
     gap: 1.2rem;
   }
   #contact .wrap { grid-template-columns: 1fr; gap: 2rem; }
-  .contact-actions { max-width: 100%; }
   .beyond { grid-template-columns: 1fr; gap: 1.2rem; }
   .case { grid-template-columns: 1fr; gap: 1rem; }
   .timeline li { grid-template-columns: 1fr; gap: .2rem; }
@@ -498,8 +483,9 @@ footer .wrap {
   section { padding: 3.2rem 0; }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 480px) {
   .facts { grid-template-columns: 1fr; }
+  .contact-actions { grid-template-columns: 1fr; }
 }
 
 /* Styles Conseil / B2B Advisory */
