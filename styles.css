@@ -293,6 +293,11 @@ h2 {
   margin-bottom: .5rem;
 }
 
+/* Mobile-only compact SVG diagrams inside Réalisations / Achievements */
+.mobile-viz {
+  display: none;
+}
+
 h3 {
   font: 500 1.35rem/1.25 var(--serif);
   margin: 0 0 .35rem;
@@ -445,6 +450,8 @@ footer .wrap {
 
 @media (prefers-reduced-motion: reduce) {
   h1 { animation: none; }
+  .deliv-card { transition: none; }
+  .deliv-card:hover { transform: none; }
   html { scroll-behavior: auto; }
 }
 
@@ -502,6 +509,20 @@ footer .wrap {
     grid-template-columns: 1fr;
     gap: 1.1rem;
     padding: 1.85rem 0;
+  }
+  .mobile-viz {
+    display: block;
+    margin-top: .85rem;
+    padding: .5rem .6rem;
+    background: #FCFDFB;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .mobile-viz svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 68px;
   }
   dl {
     grid-template-columns: 1fr;
