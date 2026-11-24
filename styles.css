@@ -105,6 +105,19 @@ nav a.advisory:hover {
   text-decoration: none;
 }
 
+nav a.trajectory {
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  padding: .15rem .7rem;
+  border-radius: 2px;
+}
+
+nav a.trajectory:hover {
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+}
+
 nav .lang {
   color: var(--ink);
   font-weight: 600;
