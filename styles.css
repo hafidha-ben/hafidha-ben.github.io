@@ -508,13 +508,7 @@ h2 {
   display: none;
 }
 
-.exp-head-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
+
 
 .exp-entry h3 {
   font: 500 1.2rem/1.25 var(--serif);
@@ -525,7 +519,8 @@ h2 {
 .exp-head-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
   gap: .75rem;
   width: 100%;
 }
@@ -981,13 +976,13 @@ footer .wrap {
   .mobile-hero-portrait {
     display: block;
     width: 100%;
-    height: 270px;
+    height: 295px;
     margin: 0 0 1.35rem;
     border-radius: 2px;
     background-color: #0F1F33;
     background-image: url("Photo%20portrait%20Hafidha%20Benyahia.jpg");
-    background-size: 118% auto;
-    background-position: 50% 36%;
+    background-size: 108% auto;
+    background-position: 50% 50%;
     background-repeat: no-repeat;
   }
   .mobile-hero-portrait.en-bg {
@@ -996,6 +991,7 @@ footer .wrap {
 
   .exp-head-row {
     align-items: flex-start;
+    flex-wrap: nowrap;
     gap: .6rem;
   }
   .exp-entry h3 {
