@@ -219,6 +219,11 @@ nav .lang {
   color: #FCFDFB;
 }
 
+
+.mobile-hero-portrait {
+  display: none;
+}
+
 /* Panneau de contenu qui remonte par-dessus l'image au défilement */
 .content-sheet {
   position: relative;
@@ -425,10 +430,26 @@ h2 {
   list-style: none;
   cursor: pointer;
   color: var(--accent);
-  font-weight: 500;
-  display: flex;
-  justify-content: space-between;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
+  gap: .4rem;
+  min-width: 170px;
+  height: 30px;
+  padding: .15rem .65rem;
+  border: 1px solid rgba(30, 91, 82, 0.35);
+  background: rgba(30, 91, 82, 0.06);
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.vignette-more[open] summary {
+  background: var(--accent);
+  color: #FCFDFB;
+  border-color: var(--accent);
 }
 
 .vignette-more summary::-webkit-details-marker {
@@ -501,16 +522,27 @@ h2 {
   color: var(--ink);
 }
 
-.exp-entry h3 {
-  display: inline-flex;
+.exp-head-row {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: .5rem;
+  gap: .75rem;
+  width: 100%;
 }
 
-.exp-entry h3::after {
+.exp-entry h3 {
+  display: block;
+  flex: 1 1 auto;
+}
+
+.exp-head-row::after {
   content: "Détails +";
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-width: 96px;
+  height: 28px;
   font-family: var(--sans);
   font-size: .76rem;
   font-weight: 600;
@@ -518,22 +550,23 @@ h2 {
   color: var(--accent);
   border: 1px solid rgba(30, 91, 82, 0.35);
   background: rgba(30, 91, 82, 0.06);
-  padding: .12rem .48rem;
+  padding: .15rem .55rem;
   border-radius: 2px;
+  white-space: nowrap;
 }
 
-.exp-entry[open] h3::after {
+.exp-entry[open] .exp-head-row::after {
   content: "Réduire −";
   background: var(--accent);
   color: #FCFDFB;
   border-color: var(--accent);
 }
 
-html[lang="en"] .exp-entry h3::after {
+html[lang="en"] .exp-head-row::after {
   content: "Details +";
 }
 
-html[lang="en"] .exp-entry[open] h3::after {
+html[lang="en"] .exp-entry[open] .exp-head-row::after {
   content: "Hide −";
 }
 
@@ -936,19 +969,29 @@ footer .wrap {
     padding: 0 1.25rem;
   }
   .hero-cover {
-    background-image:
-      linear-gradient(180deg, rgba(15, 31, 51, 0.08) 0%, rgba(15, 31, 51, 0.42) 38%, rgba(15, 31, 51, 0.88) 68%, #0F1F33 100%),
-      url("Photo%20portrait%20Hafidha%20Benyahia.jpg");
-    background-size: 100% 100%, cover;
-    background-position: 0 0, 50% 6%;
+    background-color: #0F1F33;
+    background-image: none;
     background-attachment: scroll;
-    min-height: 78vh;
-    padding: 12rem 0 2.5rem;
+    min-height: auto;
+    padding: 3rem 0 2.5rem;
   }
   .hero-cover.en-bg {
-    background-image:
-      linear-gradient(180deg, rgba(15, 31, 51, 0.08) 0%, rgba(15, 31, 51, 0.42) 38%, rgba(15, 31, 51, 0.88) 68%, #0F1F33 100%),
-      url("../Photo%20portrait%20Hafidha%20Benyahia.jpg");
+    background-image: none;
+  }
+  .mobile-hero-portrait {
+    display: block;
+    width: 100%;
+    height: 270px;
+    margin: 0 0 1.35rem;
+    border-radius: 2px;
+    background-color: #0F1F33;
+    background-image: url("Photo%20portrait%20Hafidha%20Benyahia.jpg");
+    background-size: cover;
+    background-position: 50% 10%;
+    background-repeat: no-repeat;
+  }
+  .mobile-hero-portrait.en-bg {
+    background-image: url("../Photo%20portrait%20Hafidha%20Benyahia.jpg");
   }
   .hero-cover h1 {
     font-size: clamp(2.15rem, 8.2vw, 2.8rem);
