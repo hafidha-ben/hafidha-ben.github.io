@@ -473,6 +473,14 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: .25rem;
+  padding: .25rem .4rem;
+  margin: -.25rem -.4rem;
+  border-radius: 2px;
+  transition: background-color .15s ease;
+}
+
+.exp-entry > summary:hover {
+  background: rgba(30, 91, 82, 0.05);
 }
 
 .exp-entry > summary::-webkit-details-marker {
@@ -493,15 +501,40 @@ h2 {
   color: var(--ink);
 }
 
+.exp-entry h3 {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+
 .exp-entry h3::after {
-  content: " +";
-  color: var(--accent);
+  content: "Détails +";
+  display: inline-flex;
+  align-items: center;
   font-family: var(--sans);
-  font-weight: 500;
+  font-size: .76rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  color: var(--accent);
+  border: 1px solid rgba(30, 91, 82, 0.35);
+  background: rgba(30, 91, 82, 0.06);
+  padding: .12rem .48rem;
+  border-radius: 2px;
 }
 
 .exp-entry[open] h3::after {
-  content: " −";
+  content: "Réduire −";
+  background: var(--accent);
+  color: #FCFDFB;
+  border-color: var(--accent);
+}
+
+html[lang="en"] .exp-entry h3::after {
+  content: "Details +";
+}
+
+html[lang="en"] .exp-entry[open] h3::after {
+  content: "Hide −";
 }
 
 .exp-tagline {
@@ -904,17 +937,17 @@ footer .wrap {
   }
   .hero-cover {
     background-image:
-      linear-gradient(180deg, rgba(15, 31, 51, 0.22) 0%, rgba(15, 31, 51, 0.62) 52%, rgba(15, 31, 51, 0.92) 100%),
+      linear-gradient(180deg, rgba(15, 31, 51, 0.08) 0%, rgba(15, 31, 51, 0.42) 38%, rgba(15, 31, 51, 0.88) 68%, #0F1F33 100%),
       url("Photo%20portrait%20Hafidha%20Benyahia.jpg");
     background-size: 100% 100%, cover;
-    background-position: 0 0, 50% 8%;
+    background-position: 0 0, 50% 6%;
     background-attachment: scroll;
-    min-height: 82vh;
-    padding: 13.5rem 0 2.75rem;
+    min-height: 78vh;
+    padding: 12rem 0 2.5rem;
   }
   .hero-cover.en-bg {
     background-image:
-      linear-gradient(180deg, rgba(15, 31, 51, 0.22) 0%, rgba(15, 31, 51, 0.62) 52%, rgba(15, 31, 51, 0.92) 100%),
+      linear-gradient(180deg, rgba(15, 31, 51, 0.08) 0%, rgba(15, 31, 51, 0.42) 38%, rgba(15, 31, 51, 0.88) 68%, #0F1F33 100%),
       url("../Photo%20portrait%20Hafidha%20Benyahia.jpg");
   }
   .hero-cover h1 {
