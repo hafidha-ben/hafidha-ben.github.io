@@ -1085,7 +1085,7 @@ footer .wrap {
     display: none;
   }
   .mobile-offers-toggle {
-    display: block;
+    display: block !important;
     margin-top: .85rem;
     padding-top: .65rem;
     border-top: 1px dashed var(--rule);
@@ -1119,7 +1119,7 @@ footer .wrap {
     margin: 0 0 .5rem;
   }
   .mobile-context-toggle > summary {
-    display: inline-flex;
+    display: inline-flex !important;
   }
   .mobile-context-toggle > p.vignette-context {
     display: none;
@@ -1268,19 +1268,16 @@ footer .wrap {
   }
 }
 
-/* Desktop defaults for mobile-only collapsible sections */
-.mobile-context-toggle > summary {
-  display: none;
-}
-.mobile-context-toggle > p.vignette-context {
-  display: block;
-}
 
 
+}
 
 @media (min-width: 821px) {
   .mobile-context-toggle > summary,
   .mobile-offers-toggle {
     display: none;
+  }
+  .offer-list.desktop-offer-list {
+    display: block;
   }
 }
