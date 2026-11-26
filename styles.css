@@ -1119,7 +1119,30 @@ footer .wrap {
     margin: 0 0 .5rem;
   }
   .mobile-context-toggle > summary {
-    display: inline-flex !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4rem;
+    min-width: 170px;
+    height: 30px;
+    padding: .15rem .65rem;
+    border: 1px solid rgba(30, 91, 82, 0.35);
+    background: rgba(30, 91, 82, 0.06);
+    color: var(--accent);
+    border-radius: 2px;
+    font-size: .8rem;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .mobile-context-toggle[open] > summary {
+    background: var(--accent);
+    color: #FCFDFB;
+    border-color: var(--accent);
+  }
+  .mobile-context-toggle > summary span {
+    display: inline-block;
+    color: inherit;
   }
   .mobile-context-toggle > p.vignette-context {
     display: none;
