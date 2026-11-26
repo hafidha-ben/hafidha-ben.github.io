@@ -1081,6 +1081,40 @@ footer .wrap {
     text-align: center;
     border: 1px solid var(--accent);
   }
+  .offer-list.desktop-offer-list {
+    display: none;
+  }
+  .mobile-offers-toggle {
+    display: block;
+    margin-top: .85rem;
+    padding-top: .65rem;
+    border-top: 1px dashed var(--rule);
+    font-size: .85rem;
+    color: var(--muted);
+  }
+  .mobile-offers-toggle > summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mobile-offers-toggle > summary::-webkit-details-marker {
+    display: none;
+  }
+  .mobile-offers-toggle > summary::after {
+    content: "+";
+    color: var(--accent);
+    font-size: 1rem;
+  }
+  .mobile-offers-toggle[open] > summary::after {
+    content: "−";
+  }
+  .mobile-offers-toggle > ul.offer-list {
+    margin: .55rem 0 0;
+  }
   .mobile-context-toggle {
     margin: 0 0 .5rem;
   }
@@ -1092,40 +1126,6 @@ footer .wrap {
     margin-top: .55rem;
   }
   .mobile-context-toggle[open] > p.vignette-context {
-    display: block;
-  }
-  .mobile-offer-details {
-    margin-top: .85rem;
-    padding-top: .65rem;
-    border-top: 1px dashed var(--rule);
-    font-size: .85rem;
-    color: var(--muted);
-  }
-  .mobile-offer-details > summary {
-    list-style: none;
-    cursor: pointer;
-    font-weight: 600;
-    color: var(--ink);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .mobile-offer-details > summary::-webkit-details-marker {
-    display: none;
-  }
-  .mobile-offer-details > summary::after {
-    content: "+";
-    color: var(--accent);
-    font-size: 1rem;
-  }
-  .mobile-offer-details[open] > summary::after {
-    content: "−";
-  }
-  .mobile-offer-details > ul.offer-list {
-    display: none;
-    margin-top: .55rem;
-  }
-  .mobile-offer-details[open] > ul.offer-list {
     display: block;
   }
   .wrap {
@@ -1275,9 +1275,8 @@ footer .wrap {
 .mobile-context-toggle > p.vignette-context {
   display: block;
 }
-.mobile-offer-details > summary {
+
+
+.mobile-offers-toggle {
   display: none;
-}
-.mobile-offer-details > ul.offer-list {
-  display: block;
 }
