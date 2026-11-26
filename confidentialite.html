@@ -11,15 +11,22 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=17">
 </head>
 <body id="top">
 <a class="skip" href="#main">Aller au contenu</a>
 <header><div class="wrap">
 <a class="brand" href="index.html">Hafidha Benyahia</a>
-<nav aria-label="Navigation principale">
+<nav class="desktop-nav" aria-label="Navigation principale">
 <a href="index.html#realisations">Réalisations</a><a href="index.html#parcours">Parcours</a><a href="conseil.html">Conseil B2B</a><span class="lang" aria-current="true" lang="fr">FR</span><a href="en/privacy.html" hreflang="en" lang="en">EN</a>
-</nav></div></header>
+</nav>
+<details class="mobile-menu">
+<summary aria-label="Menu"><span>Menu</span><span class="menu-bars" aria-hidden="true"></span></summary>
+<nav class="mobile-nav-panel" onclick="this.parentElement.removeAttribute('open')" aria-label="Navigation principale">
+<a href="index.html#realisations">Réalisations</a><a href="index.html#parcours">Parcours</a><a href="conseil.html">Conseil B2B</a><span class="lang" aria-current="true" lang="fr">FR</span><a href="en/privacy.html" hreflang="en" lang="en">EN</a>
+</nav>
+</details>
+</div></header>
 <main id="main"><section><div class="wrap">
 <h1>Politique de confidentialité</h1>
 <p class="intro">Traitement des données personnelles conformément à la loi fédérale suisse sur la protection des données (nLPD) et au Règlement général sur la protection des données (RGPD) lorsque applicable.</p>
