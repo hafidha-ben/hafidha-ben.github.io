@@ -992,7 +992,7 @@ footer .wrap {
     width: 100%;
     order: 3;
   }
-  .mobile-quick-links a {
+  .mobile-quick-links a.quick-nav-btn {
     flex: 1 1 0;
     display: inline-flex;
     align-items: center;
@@ -1003,16 +1003,14 @@ footer .wrap {
     font: 500 .86rem/1.1 var(--sans);
     text-decoration: none;
     text-align: center;
-  }
-  .mobile-quick-links a.quick-link {
     color: var(--ink);
     background: var(--surface);
     border: 1px solid var(--rule);
   }
-  .mobile-quick-links a.quick-advisory {
-    color: var(--accent);
-    background: transparent;
-    border: 1px solid var(--accent);
+  .mobile-quick-links a.quick-nav-btn.is-active-target {
+    background: var(--accent);
+    color: #FCFDFB;
+    border-color: var(--accent);
   }
   .mobile-menu > summary {
     list-style: none;
@@ -1082,6 +1080,53 @@ footer .wrap {
     padding: .55rem .85rem;
     text-align: center;
     border: 1px solid var(--accent);
+  }
+  .mobile-context-toggle {
+    margin: 0 0 .5rem;
+  }
+  .mobile-context-toggle > summary {
+    display: inline-flex;
+  }
+  .mobile-context-toggle > p.vignette-context {
+    display: none;
+    margin-top: .55rem;
+  }
+  .mobile-context-toggle[open] > p.vignette-context {
+    display: block;
+  }
+  .mobile-offer-details {
+    margin-top: .85rem;
+    padding-top: .65rem;
+    border-top: 1px dashed var(--rule);
+    font-size: .85rem;
+    color: var(--muted);
+  }
+  .mobile-offer-details > summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mobile-offer-details > summary::-webkit-details-marker {
+    display: none;
+  }
+  .mobile-offer-details > summary::after {
+    content: "+";
+    color: var(--accent);
+    font-size: 1rem;
+  }
+  .mobile-offer-details[open] > summary::after {
+    content: "−";
+  }
+  .mobile-offer-details > ul.offer-list {
+    display: none;
+    margin-top: .55rem;
+  }
+  .mobile-offer-details[open] > ul.offer-list {
+    display: block;
   }
   .wrap {
     padding: 0 1.25rem;
@@ -1221,4 +1266,18 @@ footer .wrap {
   .vignette-more[open] > *:not(summary) {
     animation: none;
   }
+}
+
+/* Desktop defaults for mobile-only collapsible sections */
+.mobile-context-toggle > summary {
+  display: none;
+}
+.mobile-context-toggle > p.vignette-context {
+  display: block;
+}
+.mobile-offer-details > summary {
+  display: none;
+}
+.mobile-offer-details > ul.offer-list {
+  display: block;
 }
