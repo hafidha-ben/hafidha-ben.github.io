@@ -1277,6 +1277,10 @@ footer .wrap {
 }
 
 
-.mobile-offers-toggle {
-  display: none;
+
+@media (min-width: 821px) {
+  .mobile-context-toggle > summary,
+  .mobile-offers-toggle {
+    display: none;
+  }
 }
