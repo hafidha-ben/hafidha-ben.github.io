@@ -82,7 +82,8 @@ nav.desktop-nav {
   align-items: center;
 }
 
-.mobile-menu {
+.mobile-menu,
+.mobile-quick-links {
   display: none;
 }
 
@@ -965,13 +966,16 @@ footer .wrap {
     font-size: 1.0625rem;
   }
   header .wrap {
-    flex-wrap: nowrap;
-    padding-top: .65rem;
-    padding-bottom: .65rem;
+    flex-wrap: wrap;
+    row-gap: .5rem;
+    column-gap: .65rem;
+    padding-top: .6rem;
+    padding-bottom: .6rem;
     position: relative;
   }
   .brand {
     font-size: 1.08rem;
+    order: 1;
   }
   nav.desktop-nav {
     display: none;
@@ -979,6 +983,36 @@ footer .wrap {
   .mobile-menu {
     display: block;
     margin-left: auto;
+    order: 2;
+  }
+  .mobile-quick-links {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    width: 100%;
+    order: 3;
+  }
+  .mobile-quick-links a {
+    flex: 1 1 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    padding: .28rem .65rem;
+    border-radius: 2px;
+    font: 500 .86rem/1.1 var(--sans);
+    text-decoration: none;
+    text-align: center;
+  }
+  .mobile-quick-links a.quick-link {
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+  }
+  .mobile-quick-links a.quick-advisory {
+    color: var(--accent);
+    background: transparent;
+    border: 1px solid var(--accent);
   }
   .mobile-menu > summary {
     list-style: none;
@@ -1048,6 +1082,53 @@ footer .wrap {
     padding: .55rem .85rem;
     text-align: center;
     border: 1px solid var(--accent);
+  }
+  .mobile-context-toggle {
+    margin-top: .55rem;
+  }
+  .mobile-context-toggle > summary {
+    display: inline-flex;
+  }
+  .mobile-context-toggle > p.vignette-context {
+    display: none;
+    margin-top: .55rem;
+  }
+  .mobile-context-toggle[open] > p.vignette-context {
+    display: block;
+  }
+  .mobile-offer-details {
+    margin-top: .85rem;
+    padding-top: .65rem;
+    border-top: 1px dashed var(--rule);
+    font-size: .85rem;
+    color: var(--muted);
+  }
+  .mobile-offer-details > summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mobile-offer-details > summary::-webkit-details-marker {
+    display: none;
+  }
+  .mobile-offer-details > summary::after {
+    content: "+";
+    color: var(--accent);
+    font-size: 1rem;
+  }
+  .mobile-offer-details[open] > summary::after {
+    content: "−";
+  }
+  .mobile-offer-details > ul.offer-list {
+    display: none;
+    margin-top: .55rem;
+  }
+  .mobile-offer-details[open] > ul.offer-list {
+    display: block;
   }
   .wrap {
     padding: 0 1.25rem;
@@ -1187,4 +1268,18 @@ footer .wrap {
   .vignette-more[open] > *:not(summary) {
     animation: none;
   }
+}
+
+/* Desktop defaults for mobile-only collapsible sections */
+.mobile-context-toggle > summary {
+  display: none;
+}
+.mobile-context-toggle > p.vignette-context {
+  display: block;
+}
+.mobile-offer-details > summary {
+  display: none;
+}
+.mobile-offer-details > ul.offer-list {
+  display: block;
 }
